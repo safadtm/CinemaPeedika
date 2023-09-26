@@ -1,6 +1,6 @@
 # Cinema Peedika - Hub for Cinephiles
 
-![Cinema Peedika Logo](Cinema Peedika Logo.png)
+![Cinema Peedika Logo](images/CinemaPeedikaLogo.png)
 
 Cinema Peedika is a comprehensive online platform dedicated to cinephiles and movie enthusiasts. This project merges the functionality of an information-rich movie database with the convenience of a movie ticket booking platform. With Cinema Peedika, we aim to simplify the movie-going experience, making it more enjoyable and hassle-free.
 
