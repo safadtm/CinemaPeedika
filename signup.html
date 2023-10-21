@@ -3,26 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/CSS/signup.css">
-    <title>Sign Up</title>
+    
+    <title>CinemaPeedika</title>
+
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
 </head>
-<body>
-    <div class="container">
-        <h1>Create Account</h1>
-        <form id="signup-form" action="index.html" >
-            <label for="name">Your name</label>
-            <input type="text" id="name" name="name" required>
+<body class="signup-body" >
+    <div class="signup-container">
+        <h1 class="signup-h1">Create Account</h1>
+        <form class="signup-form" id="signup-form" action="index.html" >
+            <label class="signup-label" for="name">Your name</label>
+            <input class="signup-input" type="text" id="name" name="name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <label class="signup-label" for="email">Email</label>
+            <input class="signup-input" type="email" id="email" name="email" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit" id="signup-button">Sign Up</button>
+            <label class="signup-label" for="password">Password</label>
+            <input class="signup-input" type="password" id="password" name="password" required>
+            
+            <button class="signup-button" type="submit" id="signup-button">Sign Up</button>
         </form>
-        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+        <p class="signup-para">Already have an account? <a class="signup-a" href="signin.html">Sign In</a></p>
     </div>
-    <script src="assets/js/redirect.js"></script>
 </body>
 </html>
