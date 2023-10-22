@@ -1,25 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>CinemaPeedika</title>
-
-    <link rel="stylesheet" href="assets/CSS/styles.css">
-
-    <!--==================== ICONS ====================-->
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-
-    <!-- ======================= FAVICON ================ -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-</head>
-
-
 <body class="homepage-body">
     <!-- ============= HEADER ============ -->
     <header>
@@ -51,7 +29,7 @@
     <!--==================== MAIN ====================-->
     <main class="main">
         <!-- ============= Trailer =============== -->
-        <!-- <section class="trailer">
+        <section class="trailer">
             <div class="main-container">
                 <div class="movie-home-container">
                     <div class="movie-home-trailer">
@@ -67,30 +45,10 @@
                     </div>
                 </div>
 
-                           </div>
-
-        </section> -->
-        <div class="main-container">
-
-            <div class="movie-details-container">
-                <a href="moviepage.html" ><h1>Leo</h1></a><br>
-                <p>லி,हि, +2 more ∙ Action ∙ U/A 16+</p>
-                <a href="moviepage.html"><button class="watch-trailer-button" type="submit"
-                        id="watch-trailer-button"><iconify-icon icon="ic:baseline-play-arrow" width="25"></iconify-icon> Trailer</button>
-                </a>
             </div>
-            <div class="movie-banner-container">
-                <div class="movie-banner-img">
-                    <a href="moviepage.html">
-                        <img src="https://www.themoviedb.org/t/p/original/zJ4wVP58MrYYZdXOd2IbYdoYUPD.jpg" alt="Leo">
-                    </a>
-                </div>
-            </div>
-        </div>
 
-        
+        </section>
 
     </main>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
-
-</html>
