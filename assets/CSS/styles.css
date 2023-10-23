@@ -47,7 +47,63 @@
     padding: 0px 1.3%;
 }
 
+.subtitle {
+    color: #ccc;
+}
 
+.i-t-center {
+    align-items: center;
+    padding: 5px;
+}
+
+/* ============== COLORS ============== */
+.blue-color{
+    color: blue;
+}
+.bullet-point{
+    color:#fff;
+}
+.color-red{
+  color:   rgb(229, 9, 20)
+
+}
+/* ============== PADDING ============ */
+.p-t-10{
+    padding-top: 10px;
+}
+.p-10{
+    padding: 10px;
+}
+
+
+/* ============== MARGIN  ============== */
+.m-t-10{
+    margin-top: 10px;
+}
+
+.m-l-30{
+    margin-left: 30px;
+}
+
+/* ============= Font Sizes ========== */
+.font14 {
+    font-size: 14px;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+.font22 {
+    font-size: 22px;
+}
+
+/* ============= FONT WEIGHTS ================== */
+.f-w-700{
+    font-weight: 700;
+}
+
+/* ================================ */
 body {
     font-family: Arial, sans-serif;
     /* background-color: rgba(31, 27, 29, 0.96); */
@@ -175,7 +231,7 @@ body {
     transition: filter 0.3s ease-in-out;
 }
 
-.logo:hover img{
+.logo:hover img {
     filter: brightness(1.4);
 }
 
@@ -236,9 +292,10 @@ main {
     display: flex;
     justify-content: space-between;
     background-color: #000;
-    
+
 }
-.movie-details-container{
+
+.movie-details-container {
     padding: 10px;
     /* background-color: red; */
     height: 500px;
@@ -249,15 +306,18 @@ main {
     justify-content: flex-end;
     padding-bottom: 60px;
 }
-.movie-details-container a{
+
+.movie-details-container a {
     text-decoration: none;
     color: #fff;
 }
-.movie-details-container p{
+
+.movie-details-container p {
     color: #806060d5;
     font-size: small;
 }
-.watch-trailer-button{
+
+.watch-trailer-button {
     background-color: rgb(229, 9, 20);
     color: #fff;
     padding: 10px;
@@ -271,72 +331,116 @@ main {
     justify-content: center;
 }
 
-.watch-trailer-button:hover{
+.watch-trailer-button:hover {
     color: rgb(229, 9, 20);
     background-color: #000;
 }
-.movie-banner-container{
+
+.movie-banner-container {
     background-color: #000;
     width: 800px;
     height: 500px;
 }
 
-.movie-banner-container img{
+.movie-banner-container img {
     width: 800px;
     height: 500px;
     transition: filter 0.3s ease-in-out;
 }
-.movie-banner-container:hover img{
+
+.movie-banner-container:hover img {
     filter: brightness(1.4);
 }
 
-/* =========== Trailer section =======*/
-.movie-home-container {
+/* =================== Movie Detail Page ================ */
+/* ============ Movie Details Section ================== */
+.background {
+    background-image: url('https://www.themoviedb.org/t/p/original/sUGukiolx3XiBMfV4zZrPGv7fVu.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 800px;
     position: relative;
 }
 
-.movie-home-trailer {
-    margin: 10px;
-    width: 600px;
-    height: 400px;
+.movie-detail-container1 {
+    background-color: rgba(168, 142, 142, 0.10);
+    /* Semi-transparent white background */
+    backdrop-filter: blur(15px);
+    width: 100%;
+    height: 100%;
+    padding: 40px 50px;
     color: #fff;
-    border: 3px solid #000;
 }
 
-.movie-home-trailer iframe {
-    width: 200px;
-    height: 400px;
+.movie-detail-container1 h1 {
+    font-size: 40px;
 }
 
-.movie-home-poster {
-    position: absolute;
-    bottom: 10px;
-    left: 40px;
-    z-index: 1;
-}
-
-.movie-home-poster img {
-    max-width: 140px;
-    border: 2px solid #fff;
-}
-
-/* ============ UP Next Section ======== */
-.upnext-h2 {
-    color: rgb(229, 9, 20);
-}
-
-.upnext-container {
-    margin: 10px;
+.ratings {
     padding: 5px;
-    width: 500px;
-    height: auto;
-    color: #763737;
+    justify-content: space-between;
+    width: 270px;
+
 }
 
-.upnext-inner-container {
+/* =========== Poster And Trailer section =======*/
+.movie-poster img{
+    width: 230px;
+    height: 350px;
+}
 
-    background: linear-gradient(to bottom, #211e1e, #99999915);
-    width: 350px;
-    height: 300px;
-    padding: 10px;
+.movie-trailer {
+    margin-left: 15px;
+    width: 700px;
+    height: 350px;
+    color: #fff;
+}
+
+.movie-trailer iframe {
+    width: 700px;
+    height: 350px;
+}
+
+/* ============ Details ========== */
+
+.transparent-button {
+    margin: 4px;
+    width: 66px; 
+    height: 28px; 
+    background-color: transparent; 
+    border: 2px solid #999; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    color: #fff;
+}
+
+.transparent-button:hover{
+    background-color: #999;
+}
+
+.movie-description p{
+    line-height: 1.5;
+}
+
+.divider{
+    color: #333;
+    width: 660.26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.movie-description a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.movie-description a:hover {
+    text-decoration: underline;
+}
+
+/* ============= CAST Deatail Section ============= */
+.movie-detail-container2 {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
 }

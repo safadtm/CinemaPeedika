@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
     <title>CinemaPeedika</title>
 
     <link rel="stylesheet" href="assets/CSS/styles.css">
@@ -16,7 +17,156 @@
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
 
 </head>
+
 <body>
-    
+    <!-- ============= HEADER ============ -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/Cinema Peedika Logo (1).png" alt="Cinema Peedika Logo">
+                </a>
+            </div>
+
+            <div class="nav-items">
+                <ul class="nav-links">
+                    <li><a href="index.html">Movies</a></li>
+                    <li><a href="genres.html">Genres</a></li>
+                    <li><a href="trending.html">Trending</a></li>
+                    <li><a href="booktickets.html">Book Tickets</a></li>
+                    <li><input class="search" type="text" placeholder="Search"></li>
+                    <li>
+                        <a href="signin.html"><button class="signup-button homepage-signin-btn" type="submit"
+                                id="signin-button">New User?</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- ================== Movie Details Section ==================== -->
+        <div class="background">
+            <div class="movie-detail-container1">
+                <!-- ========== Movie Title and Rating   ========== -->
+                <div class="flex jc-sp-b">
+                    <div>
+                        <h1>Leo</h1>
+                        <h5 class="subtitle">2023 • 2h 44min</h5>
+                    </div>
+                    <div class="flex ratings ">
+                        <div class="imdb-rating">
+                            <p class="subtitle">IMDb RATING</p>
+
+
+                            <div class="i-t-center flex jc-sp-b">
+                                <div>
+                                    <iconify-icon icon="material-symbols:star" style="color: red; "
+                                        width="35"></iconify-icon>
+                                </div>
+                                <div>
+                                    <p><b class="font22">8.0</b> /10</p>
+                                    <p class="subtitle font14">28k</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="ur-rating ">
+                            <p class="subtitle">YOUR RATING</p>
+
+                            <div class="i-t-center flex" style="color: blue;">
+
+                                <div>
+                                    <iconify-icon icon="material-symbols:star-outline" style="color: blue;"
+                                        width="35"></iconify-icon>
+                                </div>
+                                <div>
+                                    <p><b class="font20">Rate</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- ========== Movie Title and Rating Ends here  ========== -->
+
+                <!-- =========== Movie Poster and Trailer -->
+                <div class="flex jc-sp-b p-t-10">
+                    <div class="movie-poster">
+                        <img src="https://www.themoviedb.org/t/p/original/4exBoMlUv8hrFxQaElF1IfxIrYO.jpg" alt="Poster">
+                    </div>
+                    <div class="movie-trailer">
+                        <iframe
+                            src="https://www.youtube.com/embed/Po3jStA673E?rel=0&modestbranding=1&showinfo=0&autoplay=1"
+                            title="LEO - Official Trailer | Thalapathy Vijay | Lokesh Kanagaraj | Anirudh Ravichander"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- ========== Description Section  -->
+                <div class="flex jc-sp-b m-t-10 ">
+
+                    <!-- ========== Details ===========-->
+                    <div>
+                        <section style=" width: 660.26px; height: auto;">
+                            <div style="width: 300.46px; height: 37.14px;">
+                                <button class="transparent-button">Action</button>
+                                <button class="transparent-button">Crime</button>
+                                <button class="transparent-button">Drama</button>
+                            </div>
+                            <div class="movie-description">
+                                <p>
+                                    Parthiban is a mild mannered cafe owner in Kashmir, when he fends off a gang of
+                                    <br>murderous thugs, he gains attention from a drug cartel who claims he was once, a
+                                    <br> part of them.
+                                </p>
+                                <hr class="divider">
+                                <div class="flex">
+                                    <h4>Director</h4>
+                                    <span class="blue-color m-l-30 f-w-700">Lokesh Kanagaraj</span>
+                                </div>
+                                <hr class="divider">
+                                <div class="flex">
+                                    <h4>Writers</h4>
+                                    <span class="blue-color m-l-30 f-w-700">Lokesh Kanagaraj <span
+                                            class="bullet-point">•</span>
+                                        Rathna Kumar <span class="bullet-point">•</span> Deeraj Vaidi</span>
+                                </div>
+                                <hr class="divider">
+                                <div class="flex">
+                                    <h4>Stars</h4>
+                                    <span class="blue-color m-l-30 f-w-700" >Joseph Vijay <span class="bullet-point">•</span>
+                                        Sanjay Dutt <span class="bullet-point">•</span> Trisha Krishnan</span>
+                                </div>
+                                <hr class="divider">
+                                <div class="flex al-center">
+                                    <a href="https://en.wikipedia.org/wiki/Leo_(2023_Indian_film)#Production"
+                                        target="_blank">
+                                        See production, box office & company info
+                                        <iconify-icon icon="icon-park-outline:share" style="color: white;"
+                                            width="15"></iconify-icon>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- ============ See Shows button -->
+                    <div class="m-l-30" style="background-color: blue; width: 300.63px; height: auto;"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================== CAST Detail Section ==================== -->
+        <div class="movie-detail-container2"></div>
+    </main>
 </body>
+
 </html>
