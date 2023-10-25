@@ -144,6 +144,7 @@ body {
     border-radius: 5px;
     box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 1);
     text-align: center;
+    margin-top: 65px;
 }
 
 .signup-h1 {
@@ -352,6 +353,43 @@ main {
     filter: brightness(1.4);
 }
 
+/* Blockbuster & KH Movies */
+.blockbuster-container, .kh-movies-container {
+    color:#fff;
+    padding: 5px;
+    width: 100%;
+    height: 280px;
+}
+.kh-movies-container{
+    margin: 10px 0px;
+
+}
+.blockbuster-container .kh-movies-container h3{
+    padding-left: 10px;
+}
+.bb-movies-poster, .kh-movies-poster{
+    display: flex;
+    justify-content: space-between;
+}
+
+.poster-card{
+    margin: 5px;
+    width: 152px;
+    height: auto;
+    background-color: red;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.poster-card img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out;
+}
+
+.poster-card:hover img{
+    filter: brightness(1.2);
+}
 /* =================== Movie Detail Page ================ */
 /* ============ Movie Details Section ================== */
 .background {
