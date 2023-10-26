@@ -57,31 +57,34 @@
 }
 
 /* ============== COLORS ============== */
-.blue-color{
+.blue-color {
     color: blue;
 }
-.bullet-point{
-    color:#fff;
-}
-.color-red{
-  color:   rgb(229, 9, 20)
 
+.bullet-point {
+    color: #fff;
 }
+
+.color-red {
+    color: rgb(229, 9, 20)
+}
+
 /* ============== PADDING ============ */
-.p-t-10{
+.p-t-10 {
     padding-top: 10px;
 }
-.p-10{
+
+.p-10 {
     padding: 10px;
 }
 
 
 /* ============== MARGIN  ============== */
-.m-t-10{
+.m-t-10 {
     margin-top: 10px;
 }
 
-.m-l-30{
+.m-l-30 {
     margin-left: 30px;
 }
 
@@ -99,7 +102,7 @@
 }
 
 /* ============= FONT WEIGHTS ================== */
-.f-w-700{
+.f-w-700 {
     font-weight: 700;
 }
 
@@ -130,6 +133,44 @@ body {
 ::-webkit-scrollbar-corner {
     background-color: #080c0e;
 }
+
+/* ================ BACK TO TOP BUTTON =========== */
+#backToTopButton {
+    width: 126px;
+    height: 28px;
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+#backToTopButton img {
+    width: 16px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+#backToTopButton span {
+    margin-right: 5px;
+}
+
+#backToTopButton:hover{
+    background-color: #999;
+}
+
 
 /* ============ SIGNUP/SIGNIN ============ */
 .signup-body {
@@ -354,25 +395,30 @@ main {
 }
 
 /* Blockbuster & KH Movies */
-.blockbuster-container, .kh-movies-container {
-    color:#fff;
+.blockbuster-container,
+.kh-movies-container {
+    color: #fff;
     padding: 5px;
     width: 100%;
     height: 280px;
 }
-.kh-movies-container{
+
+.kh-movies-container {
     margin: 10px 0px;
 
 }
-.blockbuster-container .kh-movies-container h3{
+
+.blockbuster-container .kh-movies-container h3 {
     padding-left: 10px;
 }
-.bb-movies-poster, .kh-movies-poster{
+
+.bb-movies-poster,
+.kh-movies-poster {
     display: flex;
     justify-content: space-between;
 }
 
-.poster-card{
+.poster-card {
     margin: 5px;
     width: 152px;
     height: auto;
@@ -380,16 +426,18 @@ main {
     overflow: hidden;
     border-radius: 10px;
 }
+
 .poster-card img {
-    width: 100%; 
+    width: 100%;
     height: 100%;
     object-fit: cover;
     transition: filter 0.3s ease-in-out;
 }
 
-.poster-card:hover img{
+.poster-card:hover img {
     filter: brightness(1.2);
 }
+
 /* =================== Movie Detail Page ================ */
 /* ============ Movie Details Section ================== */
 .background {
@@ -422,7 +470,7 @@ main {
 }
 
 /* =========== Poster And Trailer section =======*/
-.movie-poster img{
+.movie-poster img {
     width: 230px;
     height: 350px;
 }
@@ -443,31 +491,31 @@ main {
 
 .transparent-button {
     margin: 4px;
-    width: 66px; 
-    height: 28px; 
-    background-color: transparent; 
-    border: 2px solid #999; 
-    border-radius: 50px; 
-    cursor: pointer; 
+    width: 66px;
+    height: 28px;
+    background-color: transparent;
+    border: 2px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
     color: #fff;
 }
 
-.transparent-button:hover{
+.transparent-button:hover {
     background-color: #999;
 }
 
-.movie-description p{
+.movie-description p {
     line-height: 1.5;
 }
 
-.divider{
+.divider {
     color: #333;
     width: 660.26px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.movie-description a{
+.movie-description a {
     text-decoration: none;
     color: #fff;
 }
