@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
     <title>CinemaPeedika</title>
-  
+
     <link rel="stylesheet" href="assets/CSS/styles.css">
-  
+
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
@@ -17,19 +17,26 @@
 
 <body class="signup-body">
     <div class="signup-container">
-        <h1 class="signup-h1">Sign In</h1>
-        <form class="signup-form" id="signin-form" action="index.html">
-            <label class="signup-label" for="email">Email</label>
-            <input class="signup-input" type="email" id="email" name="email" required>
+        <form class="signup-form" id="signup-form" action="index.html">
+            <h1 class="signup-h1">Sign In</h1>
 
-            <label class="signup-label" for="password">Password</label>
-            <input class="signup-input" type="password" id="password" name="password" required>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password">
+                <div class="error"></div>
+            </div>
 
             <button class="signup-button" type="submit" id="signin-button">Sign In</button>
-        </form>
-        <p class="signup-para">Don't have an account? <a class="signup-a" href="signup.html">Sign Up</a></p>
-    </div>
+            <p class="signup-para">Don't have an account? <a class="signup-a" href="signup.html">Sign Up</a></p>
 
+        </form>
+    </div>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

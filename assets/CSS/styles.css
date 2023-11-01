@@ -173,19 +173,18 @@ body {
 
 
 /* ============ SIGNUP/SIGNIN ============ */
-.signup-body {
+/* .signup-body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.signup-container {
-    background-color: #fff;
+} */
+#signup-form {
+    width: 300px;
+    margin: 20vh auto 0 auto;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 1);
-    text-align: center;
-    margin-top: 65px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
 }
 
 .signup-h1 {
@@ -199,22 +198,36 @@ body {
     flex-direction: column;
 }
 
-.signup-label {
-    text-align: left;
-    margin-top: 10px;
+.input-control {
+    display: flex;
+    flex-direction: column;
 }
 
-.signup-input {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    caret-color: red;
+.input-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
 }
 
-.signup-input:focus {
+.input-control input:focus {
+    outline: 0;
+}
 
-    border: 1px solid rgb(229, 9, 20);
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
 }
 
 .signup-button {
@@ -524,9 +537,20 @@ main {
     text-decoration: underline;
 }
 
-/* ============= CAST Deatail Section ============= */
+/* ============= Storyline Section ============= */
 .movie-detail-container2 {
     width: 100%;
-    height: 100px;
+    height: 600px;
     background-color: #fff;
+}
+
+.storyline-container{
+    width: 100%;
+    height: 300px;
+    background-color: red;
+}
+.details-container{
+    width: 100%;
+    height: 300px;
+    background-color: aqua; 
 }

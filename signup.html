@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>CinemaPeedika</title>
 
     <link rel="stylesheet" href="assets/CSS/styles.css">
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
 </head>
-<body class="signup-body" >
+
+<body class="signup-body">
     <div class="signup-container">
-        <h1 class="signup-h1">Create Account</h1>
-        <form class="signup-form" id="signup-form" action="index.html" >
-            <label class="signup-label" for="name">Your name</label>
-            <input class="signup-input" type="text" id="name" name="name" required>
-
-            <label class="signup-label" for="email">Email</label>
-            <input class="signup-input" type="email" id="email" name="email" required>
-
-            <label class="signup-label" for="password">Password</label>
-            <input class="signup-input" type="password" id="password" name="password" required>
-            
+        <form class="signup-form" id="signup-form" action="index.html">
+            <h1 class="signup-h1">Create Account</h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="signUpUsername" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="signUpEmail" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="signUpPassword" name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Confirm Password</label>
+                <input id="signUpPassword2" name="password2" type="password">
+                <div class="error"></div>
+            </div>
             <button class="signup-button" type="submit" id="signup-button">Sign Up</button>
+            <p class="signup-para">Already have an account? <a class="signup-a" href="signin.html">Sign In</a></p>
+
         </form>
-        <p class="signup-para">Already have an account? <a class="signup-a" href="signin.html">Sign In</a></p>
     </div>
+
+
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
