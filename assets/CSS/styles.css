@@ -187,6 +187,15 @@ body {
     font-size: 12px;
 }
 
+#signIn-form {
+    width: 300px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
 .signup-h1 {
     text-align: start;
     font-size: 24px;

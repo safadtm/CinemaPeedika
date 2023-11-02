@@ -106,16 +106,12 @@ function setupSignInValidation() {
     // ...
     const validateSignInInputs = () => {
         const signInEmailValue = signInEmail.value.trim();
-        const signUpEmailValue = signUpEmail.value.trim();
         const signInPasswordValue = signInPassword.value.trim();
-        const signUpPasswordValue = signUpPassword.value.trim();
 
         if (signInEmailValue === '') {
             setError(signInEmail, 'Email is required');
         } else if (!isValidEmail(signInEmailValue)) {
             setError(signInEmail, 'Provide a valid Email address');
-        } else if (signInEmailValue === signUpEmailValue) {
-            setError(signInEmail, 'Email is doesnt exist');
         } else {
             setSuccess(signInEmail);
         }
@@ -124,8 +120,6 @@ function setupSignInValidation() {
             setError(signInPassword, 'Password is required');
         } else if (signInPasswordValue.length < 8) {
             setError(signInPassword, 'Password must be at least 8 character.')
-        } else if (signInPasswordValue === signUpPasswordValue) {
-            setError(signInPassword, 'Wrong password')
         } else {
             setSuccess(signInPassword);
         }
