@@ -463,7 +463,7 @@ main {
 /* =================== Movie Detail Page ================ */
 /* ============ Movie Details Section ================== */
 .background {
-    background-image: url('https://www.themoviedb.org/t/p/original/sUGukiolx3XiBMfV4zZrPGv7fVu.jpg');
+    background-image:url("/assets/images/movies/background/background1.jpg") ;
     background-size: cover;
     width: 100%;
     height: 800px;

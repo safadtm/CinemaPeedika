@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CinemaPeedika</title>
+    <link rel="stylesheet" href="/assets/CSS/styles.css">
+ <!--==================== ICONS ====================-->
+ <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+ <!-- ======================= FAVICON ================ -->
+ <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+ <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+</head>
+<body>
+    <header>
+        <!-- Your header content -->
+    </header>
+    <main>
+        <!-- BACK TO TOP BUTTON -->
+        <button id="backToTopButton">
+            <img src="assets/images/up-arrow.png" alt="">
+            <span>Back to top</span>
+        </button>
+        <!-- Movie Details Section -->
+        <div class="background">
+            <div class="movie-detail-container1">
+                <!-- Movie Title and Rating -->
+                <div class="flex jc-sp-b">
+                    <div>
+                        <h1 id="movieTitle"></h1>
+                        <h5 class="subtitle">2023 • 2h 44min</h5>
+                    </div>
+                    <div class="flex ratings">
+                        <div class="imdb-rating">
+                            <p class="subtitle">IMDb RATING</p>
+                            <div class="i-t-center flex jc-sp-b">
+                                <div>
+                                    <iconify-icon icon="material-symbols:star" style="color: red;" width="35"></iconify-icon>
+                                </div>
+                                <div>
+                                    <p><b class="font22" id="movieRating"></b> /10</p>
+                                    <p class="subtitle font14">28k</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ur-rating">
+                            <p class="subtitle">YOUR RATING</p>
+                            <div class="i-t-center flex" style="color: blue;">
+                                <div>
+                                    <iconify-icon icon="material-symbols:star-outline" style="color: blue;" width="35"></iconify-icon>
+                                </div>
+                                <div>
+                                    <p><b class="font20">Rate</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Movie Poster and Trailer -->
+                <div class="flex jc-sp-b p-t-10">
+                    <div class="movie-poster">
+                        <img id="moviePoster" alt="Poster">
+                    </div>
+                    <div class="movie-trailer">
+                        <iframe id="movieTrailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- Description Section -->
+                <div class="flex jc-sp-b m-t-10">
+                    <div>
+                        <section style="width: 660.26px; height: auto;">
+                            <!-- Genres buttons here -->
+                            <div style="width: 300.46px; height: 37.14px;" id="movieGenres">
+                            </div>
+                            <div class="movie-description">
+                                <p id="movieDescription"></p>
+                                <hr class="divider">
+                                <!-- Director -->
+                                <div class="flex">
+                                    <h4>Director</h4>
+                                    <span class="blue-color m-l-30 f-w-700" id="movieDirector"></span>
+                                </div>
+                                <hr class="divider">
+                                <!-- Writers -->
+                                <div class="flex">
+                                    <h4>Writers</h4>
+                                    <span class="blue-color m-l-30 f-w-700" id="movieWriters"></span>
+                                </div>
+                                <hr class="divider">
+                                <!-- Stars -->
+                                <div class="flex">
+                                    <h4>Stars</h4>
+                                    <span class="blue-color m-l-30 f-w-700" id="movieActors"></span>
+                                </div>
+                                <hr class="divider">
+                                <!-- Production company link -->
+                                <div class="flex al-center">
+                                    <a id="productionCompanyInfo" target="_blank">
+                                        See production, box office & company info
+                                        <iconify-icon icon="icon-park-outline:share" style="color: white;" width="15"></iconify-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Storyline and Details Sections -->
+        <div class="storyline-container">
+            <h3>Storyline</h3>
+        </div>
+        <div class="details-container">
+            <!-- Movie details here -->
+        </div>
+    </main>
+    <!-- JavaScript script tag -->
+    <script src="test.js"></script>
+</body>
+</html>
