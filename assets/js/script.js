@@ -24,9 +24,11 @@ const isValidEmail = email => {
     return re.test(String(email).toLowerCase());
 }
 
+// Local Storage
+let user;
+let isUserLoggedIn = false;
 
-
-// Wrap your JavaScript code in a function
+// validation
 function setupSignUpValidation() {
     const signUpForm = document.getElementById('signup-form');
     const signUpUsername = document.getElementById('signUpUsername');
@@ -75,6 +77,7 @@ function setupSignUpValidation() {
 
         if (signUpPassword2Value === '') {
             setError(signUpPassword2, 'Please confirm your Password');
+
         } else if (signUpPassword2Value !== signUpPasswordValue) {
             setError(signUpPassword2, "Passwords doesn't match");
         } else {
@@ -82,11 +85,24 @@ function setupSignUpValidation() {
         }
 
         if (document.querySelectorAll('.success').length === 4) {
+
+            user = {
+                email: signUpEmailValue,
+                password: signUpPasswordValue,
+                username: signUpUsernameValue,
+            };
+            
+            localStorage.setItem("user", JSON.stringify(user));
+            isUserLoggedIn = true;
+            
             // submit the form
-            signUpForm.submit();
+            // signUpForm.submit();
+
         }
     };
 }
+
+
 
 function setupSignInValidation() {
     const signInForm = document.getElementById('signIn-form');
@@ -108,10 +124,19 @@ function setupSignInValidation() {
         const signInEmailValue = signInEmail.value.trim();
         const signInPasswordValue = signInPassword.value.trim();
 
+        // Fetching data from local storage
+        const storedUserData = localStorage.getItem("user"); // Retrieve the user data as a string from local storage
+        const storedUser = JSON.parse(storedUserData); // Parse the string into a JavaScript object
+        const username = storedUser.username;
+        const email = storedUser.email;
+        const password = storedUser.password;
+
         if (signInEmailValue === '') {
             setError(signInEmail, 'Email is required');
         } else if (!isValidEmail(signInEmailValue)) {
             setError(signInEmail, 'Provide a valid Email address');
+        }else if(signInEmailValue!=email){
+            setError(signInEmail, 'Email doesnt exist!!!!');
         } else {
             setSuccess(signInEmail);
         }
@@ -120,22 +145,39 @@ function setupSignInValidation() {
             setError(signInPassword, 'Password is required');
         } else if (signInPasswordValue.length < 8) {
             setError(signInPassword, 'Password must be at least 8 character.')
+        }else if(signInPasswordValue!=password){
+            setError(signInPassword, 'Incorrect Password')
         } else {
             setSuccess(signInPassword);
         }
 
-
         if (document.querySelectorAll('.success').length === 2) {
+            
+            isUserLoggedIn = true;
             // submit the form
-            signInForm.submit();
+            // signInForm.submit();
         }
     };
 }
+
+
+
 
 // Call the setup functions when the page loads
 document.addEventListener('DOMContentLoaded', function () {
     setupSignUpValidation();
     setupSignInValidation();
+    if (isUserLoggedIn) {
+        // The user is logged in
+        console.log('User is logged in');
+        // You can perform actions for a logged-in user here.
+    } else {
+        // The user is not logged in
+        console.log('User is not logged in');
+        // You can perform actions for a user who is not logged in here.
+    }
+    
+    
 });
 
 
@@ -153,3 +195,4 @@ document.getElementById('backToTopButton').addEventListener('click', function ()
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 });
+
