@@ -112,6 +112,7 @@ body {
     /* background-color: rgba(31, 27, 29, 0.96); */
     background-color: #000;
     margin: 0;
+    overflow-x: hidden;
     padding: 0;
 }
 
@@ -437,14 +438,19 @@ main {
 .movies-grid-poster,
 .tv-shows-poster {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .poster-card {
+    position: relative;
+    display: flex;
+    transition: transform 0.3s;
+    cursor: pointer;
     margin: 5px;
     width: 240px;
     height: 133.71px;
-    background-color: red;
+    /* background-color: red; */
     overflow: hidden;
     border-radius: 10px;
 }
@@ -460,13 +466,18 @@ main {
     filter: brightness(1.2);
 }
 
+
 /* =================== Movie Detail Page ================ */
+.movie-description  {
+    line-height: 3rem;
+}
+
 /* ============ Movie Details Section ================== */
 .background {
     background-image: url("/assets/images/movies/background/background1.jpg");
     background-size: cover;
     width: 100%;
-    height: 800px;
+    height: auto;
     position: relative;
 }
 
@@ -478,6 +489,7 @@ main {
     height: 100%;
     padding: 40px 50px;
     color: #fff;
+    
 }
 
 .movie-detail-container1 h1 {
@@ -526,10 +538,6 @@ main {
     background-color: #999;
 }
 
-.movie-description p {
-    line-height: 1.5;
-}
-
 .divider {
     color: #333;
     width: 660.26px;
@@ -555,18 +563,15 @@ main {
 
 .storyline-container {
     width: 100%;
-    height: 300px;
-    background-color: red;
+    height: auto;
+    padding: 40px 50px;
+    background-color: #fff;
+    line-height: 3rem;
 }
 
-.details-container {
-    width: 100%;
-    height: 300px;
-    background-color: aqua;
-}
 
 /* =========== Genres Page ================ */
-.genres-section {
+/* .genres-section {
     padding: 20px;
 }
 
@@ -590,13 +595,12 @@ main {
 
 .card1 {
     background-color: #ff3860;
-    /* background-image: url(); */
 }
 
 .card2 {
     background-color: #09c372;
 }
- 
+
 .card3 {
     background-color: #999;
 }
@@ -611,6 +615,59 @@ main {
 
 .card6 {
     background-color: rgb(212, 64, 94);
+} */
+
+
+
+/* ================== FOOTER ====================== */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    /* Adjust the background color as needed */
+    color: #fff;
+    /* Adjust the text color as needed */
+    text-align: center;
+    padding: 10px;
 }
 
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.footer-logo img {
+    max-width: 100px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer-social a {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    background-color: #222;
+    text-align: center;
+    padding: 10px 0;
+}
