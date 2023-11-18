@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-        <title>CinemaPeedika</title>
-      
-        <link rel="stylesheet" href="assets/CSS/styles.css">
-      
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-    </head>
-    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CinemaPeedika</title>
+
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+</head>
+
 <body>
     <!-- ============= HEADER ============ -->
     <header>
@@ -40,5 +41,80 @@
         </div>
 
     </header>
+    <main>
+        <div class="movie-name-ctnr">
+            <div class="flex-btwn">
+                <div>
+                    <h4>Jigarthanda Double X - Tamil</h4>
+                </div>
+                <div class="custom-dropdown">
+                    <span class="dropdown-icon">
+                        <img src="assets/images/icons/icons8-location-50.png" height="20px" width="20px" alt="">
+                    </span>
+                    <select id="locationSelect">
+                        <option value="">Select location</option>
+                        <option value="location1">Kochi</option>
+                        <option value="location2">Thiruvananthapuram</option>
+                        <option value="location3">Kozhikode</option>
+                        <!-- Add more location options as needed -->
+                    </select>
+                </div>
+            </div>
+            <div class="m-t-10">
+                <button class="transparent-button">Action</button>
+                <button class="transparent-button">Comedy</button>
+                <button class="transparent-button">Drama</button>
+            </div>
+        </div>
+        <div class="date-ctnr">
+            <img src="assets/images/icons/calendar.png" alt="Calendar" id="calendar-icon">
+            <div id="date-picker-container" style="display: none;">
+                <!-- Your date picker interface here -->
+                <input type="date" id="date-picker">
+            </div>
+            <div id="date-text"></div>
+        </div>
+        <div class="selection-booking-ctnr">
+
+        </div>
+    </main>
+
+    <script>
+        // Get the current date
+        const currentDate = new Date();
+        const calendarIcon = document.getElementById('calendar-icon');
+        const datePickerContainer = document.getElementById('date-picker-container');
+        const dateText = document.getElementById('date-text');
+        const datePicker = document.getElementById('date-picker');
+
+        // Function to toggle the visibility of the date picker container
+        function toggleDatePicker() {
+            datePickerContainer.style.display = (datePickerContainer.style.display === 'block') ? 'none' : 'block';
+        }
+
+        // Function to format the date as "SUN 19 NOV"
+        function formatDate(selectedDate) {
+            const date = new Date(selectedDate);
+            const options = { weekday: 'short', day: '2-digit', month: 'short' };
+            return date.toLocaleDateString('en-US', options).toUpperCase();
+        }
+
+        // Set the default date to today's date
+        const defaultDate = formatDate(currentDate);
+        dateText.textContent = defaultDate;
+
+        // Event listener for the calendar icon click to toggle the date picker container
+        calendarIcon.addEventListener('click', toggleDatePicker);
+
+        // Event listener for date selection
+        datePicker.addEventListener('change', function (event) {
+            const selectedDate = event.target.value;
+            const formattedDate = formatDate(selectedDate);
+            dateText.textContent = formattedDate; // Update the text with the formatted date
+            toggleDatePicker(); // Hide the date picker container after selection
+        });
+
+    </script>
 </body>
+
 </html>
