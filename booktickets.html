@@ -212,6 +212,13 @@
                         theatreContainer.appendChild(showTimes);
                         theatreListContainer.appendChild(theatreContainer);
 
+                        const showTimesButtons = document.querySelectorAll('.show-times .show-tms-button');
+
+                        showTimesButtons.forEach(button => {
+                            button.addEventListener('click', function () {
+                                window.location.href = 'seatselect.html'; // Replace with your desired URL
+                            });
+                        });
                         // Add <hr> between theatres except for the last one
                         if (i < theatre.length - 1) {
                             const hrElement = document.createElement('hr');
