@@ -290,6 +290,7 @@
     </div>
     <script>
         let seats = document.querySelector(".all-seats");
+        
         for (var i = 0; i < 59; i++) {
             let randint = Math.floor(Math.random() * 2);
             let booked = randint === 1 ? "booked" : "";
@@ -304,6 +305,9 @@
                 '"></label>'
             );
         }
+
+        let totalAmount = 0;
+        let ticketCount = 0;
 
         let tickets = seats.querySelectorAll("input");
         tickets.forEach((ticket) => {
@@ -322,6 +326,10 @@
                 }
                 document.querySelector(".amount").innerHTML = amount;
                 document.querySelector(".count").innerHTML = count;
+
+                totalAmount = amount;
+                ticketCount = count;
+
             });
         });
 
@@ -344,24 +352,36 @@
         const date = getParameterByName('date');
         const showTime = getParameterByName('time');
 
-        // Update the HTML content with the parameter values
         const titleElement = document.getElementById('title');
         const movieDetailsElement = document.getElementById('movieDetails');
 
-        // Set the movie name in the title
         titleElement.textContent = movie;
-
-        // Update the movie details
         movieDetailsElement.textContent = `${theatre} | ${date}, ${showTime}`;
 
 
-        // Find the button element
+        function generateBookingID() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            const idLength = 10;
+            let bookingID = '';
+
+            for (let i = 0; i < idLength; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                bookingID += characters.charAt(randomIndex);
+            }
+
+            return bookingID;
+        }
+
+
         const bookButton = document.getElementById('bookButton');
 
         // Add a click event listener to the button
         bookButton.addEventListener('click', function () {
-            // Redirect to confirmation.html
-            window.location.href = 'confirmation.html';
+
+            const bookingID = generateBookingID();
+            const movieLang = 'Tamil';
+
+            window.location.href = `confirmation.html?movie=${encodeURIComponent(movie)}&movieLang=${encodeURIComponent(movieLang)}&theatre=${encodeURIComponent(theatre)}&date=${encodeURIComponent(date)}&time=${encodeURIComponent(showTime)}&ticketCount=${encodeURIComponent(ticketCount)}&bookingId=${encodeURIComponent(bookingID)}&totalAmount=${encodeURIComponent(totalAmount)}`;
         });
 
     </script>

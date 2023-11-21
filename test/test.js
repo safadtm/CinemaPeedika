@@ -1,33 +1,21 @@
-// script.js
-// Fetch movie data from movies.json
-fetch("movies.json")
-    .then(response => response.json())
-    .then(movieData => {
-        // Call the function to populate movie details
-        populateMovieDetails(movieData);
-    })
-    .catch(error => {
-        console.error("Error fetching movie data:", error);
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    const movieTitle = document.getElementById('movieTitle');
+    const showDetails = document.getElementById('showDetails');
 
-// Function to populate movie details
-function populateMovieDetails(movieData) {
-    document.getElementById("movieTitle").textContent = movieData.title;
-    document.getElementById("movieRating").textContent = movieData.rating;
-    document.getElementById("moviePoster").src = movieData.posterURL;
-    document.getElementById("movieTrailer").src = movieData.trailerURL;
-    var genreButtons = document.getElementById("movieGenres");
-    movieData.genre.forEach(function(genre) {
-        var button = document.createElement("button");
-        button.className = "transparent-button";
-        button.textContent = genre;
-        genreButtons.appendChild(button);
-    });
-    document.getElementById("movieDescription").textContent = movieData.description;
-    document.getElementById("movieDirector").textContent = movieData.director;
-    document.getElementById("movieWriters").textContent = movieData.writers.join(" • ");
-    document.getElementById("movieActors").textContent = movieData.actors.join(" • ");
-    var productionCompanyInfo = document.getElementById("productionCompanyInfo");
-    productionCompanyInfo.href = movieData.details[0].productionCompanyInfo;
-}
+    // Function to extract URL parameters
+    function getParameterByName(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
 
+    // Retrieve parameters and update HTML elements
+    const movie = getParameterByName('movie');
+    const theatre = getParameterByName('theatre');
+    const date = getParameterByName('date');
+    const time = getParameterByName('time');
+    const confirmationNumber = getParameterByName('confirmationNumber'); // Example parameter
+
+    movieTitle.textContent = movie || 'Movie Name';
+    showDetails.textContent = `${theatre || 'Theatre Name'} | ${date || 'Date'} | ${time || 'Time'}`;
+    document.getElementById('confirmationNumber').textContent = confirmationNumber || 'ABC123';
+});
