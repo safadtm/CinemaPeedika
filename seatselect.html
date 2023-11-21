@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ticket Booking</title>
+    <title>CinemaPeedika-ticketbooking</title>
 
     <!-- ======================= FAVICON ================ -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+
     <style>
         body {
             width: 100%;
@@ -26,7 +29,7 @@
             align-items: center;
             justify-content: center;
             background: linear-gradient(to right,
-                    rgb(255, 2, 1),
+                    rgb(218, 35, 35),
                     rgb(155, 0, 0));
         }
 
@@ -37,7 +40,6 @@
             border-radius: 3mm;
             box-sizing: border-box;
             padding: 10px;
-            font-family: poppins;
             max-height: 96vh;
             overflow: auto;
             background: white;
@@ -60,14 +62,15 @@
             display: block;
             align-items: center;
             justify-content: center;
-            background-color: #1f2533;
-            color: #fff;
-            line-height: 2rem;
+            background-color: rgb(243, 243, 243);
+            color: #000;
+            padding: 0.625rem;
         }
 
-        .title {
-            font-size: 1rem;
+        #title {
+            font-size: 1.3rem;
             font-weight: 600;
+            padding-bottom: 5px;
         }
 
         .seats {
@@ -259,8 +262,8 @@
     <div class="center">
         <div class="tickets">
             <div class="head">
-                <div class="title">Movie Name</div>
-                <div>Aashirvad Cineplexx: Perumbavoor | Today, 21 Nov, 06:30 PM</div>
+                <div id="title"></div>
+                <div id="movieDetails"></div>
             </div>
             <div class="ticket-selector">
                 <div class="seats">
@@ -281,7 +284,7 @@
                     <span> <span class="count">0</span> Tickets </span>
                     <div class="amount">0</div>
                 </div>
-                <button type="button">Book</button>
+                <button id="bookButton" type="button">Book</button>
             </div>
         </div>
     </div>
@@ -341,10 +344,25 @@
         const date = getParameterByName('date');
         const showTime = getParameterByName('time');
 
-        console.log('Movie:', movie);
-        console.log('Theatre:', theatre);
-        console.log('Date:', date);
-        console.log('Show Time:', showTime);
+        // Update the HTML content with the parameter values
+        const titleElement = document.getElementById('title');
+        const movieDetailsElement = document.getElementById('movieDetails');
+
+        // Set the movie name in the title
+        titleElement.textContent = movie;
+
+        // Update the movie details
+        movieDetailsElement.textContent = `${theatre} | ${date}, ${showTime}`;
+
+
+        // Find the button element
+        const bookButton = document.getElementById('bookButton');
+
+        // Add a click event listener to the button
+        bookButton.addEventListener('click', function () {
+            // Redirect to confirmation.html
+            window.location.href = 'confirmation.html';
+        });
 
     </script>
 </body>
