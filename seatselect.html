@@ -321,6 +321,31 @@
                 document.querySelector(".count").innerHTML = count;
             });
         });
+
+
+        // Function to get URL parameters by name
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp(`[?&]${name}(=([^&#]*)|&|#|$)`);
+            const results = regex.exec(url);
+
+            if (!results) return null;
+            if (!results[2]) return '';
+
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Get the parameters from the URL
+        const movie = getParameterByName('movie');
+        const theatre = getParameterByName('theatre');
+        const date = getParameterByName('date');
+        const showTime = getParameterByName('time');
+
+        console.log('Movie:', movie);
+        console.log('Theatre:', theatre);
+        console.log('Date:', date);
+        console.log('Show Time:', showTime);
+
     </script>
 </body>
 

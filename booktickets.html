@@ -212,11 +212,29 @@
                         theatreContainer.appendChild(showTimes);
                         theatreListContainer.appendChild(theatreContainer);
 
+
                         const showTimesButtons = document.querySelectorAll('.show-times .show-tms-button');
 
                         showTimesButtons.forEach(button => {
                             button.addEventListener('click', function () {
-                                window.location.href = 'seatselect.html'; // Replace with your desired URL
+                                const movieName = 'Jigarthanda Double X'; // Replace with the actual movie name
+                                const date = dateText.textContent.trim(); // Replace with the actual date
+
+
+                                // Retrieve the theatre name
+                                const theatreContainer = button.closest('.theatre-ctnr');
+                                const theatreName = theatreContainer.querySelector('.theatre-name').textContent.trim();
+
+                                // Retrieve the show time
+                                const showTime = button.textContent.trim();
+
+                                console.log('Movie:', movieName);
+                                console.log('Theatre:', theatreName);
+                                console.log('Date:', date);
+                                console.log('Show Time:', showTime);
+
+                                // Redirect to the seat selection page with parameters
+                                window.location.href = `seatselect.html?movie=${encodeURIComponent(movieName)}&theatre=${encodeURIComponent(theatreName)}&date=${encodeURIComponent(date)}&time=${encodeURIComponent(showTime)}`;
                             });
                         });
                         // Add <hr> between theatres except for the last one
