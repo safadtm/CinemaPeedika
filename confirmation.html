@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CinemaPeedika-confirmation</title>
+
+    <!-- ======================= FAVICON ================ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .center {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right,
+                    rgb(218, 35, 35),
+                    rgb(155, 0, 0));
+        }
+
+        .tickets {
+            width: 550px;
+            height: fit-content;
+            border: 0.4mm solid rgba(0, 0, 0, 0.08);
+            border-radius: 3mm;
+            box-sizing: border-box;
+            padding: 10px;
+            max-height: 96vh;
+            overflow: auto;
+            background: white;
+            box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .ticket-selector {
+            background: rgb(243, 243, 243);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="tickets">
+
+            <div class="ticket-selector">
+
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+
+        // Get the parameters from the URL
+        const movie = getParameterByName('movie');
+        const theatre = getParameterByName('theatre');
+        const date = getParameterByName('date');
+        const showTime = getParameterByName('time');
+
+        // Update the HTML content with the parameter values
+        const titleElement = document.getElementById('title');
+        const movieDetailsElement = document.getElementById('movieDetails');
+
+        // Set the movie name in the title
+        titleElement.textContent = movie;
+
+        // Update the movie details
+        movieDetailsElement.textContent = `${theatre} | ${date}, ${showTime}`;
+
+
+        // Find the button element
+        const bookButton = document.getElementById('bookButton');
+
+        // Add a click event listener to the button
+        bookButton.addEventListener('click', function () {
+            // Redirect to confirmation.html
+            window.location.href = 'confirmation.html';
+        });
+
+    </script>
+</body>
+
+</html>
