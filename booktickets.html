@@ -53,10 +53,9 @@
                     </span>
                     <select id="locationSelect">
                         <option value="">Select location</option>
-                        <option value="location1">Kochi</option>
-                        <option value="location2">Thiruvananthapuram</option>
-                        <option value="location3">Kozhikode</option>
-                        <!-- Add more location options as needed -->
+                        <option value="Kochi">Kochi</option>
+                        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                        <option value="Kozhikode">Kozhikode</option>
                     </select>
                 </div>
             </div>
@@ -69,17 +68,79 @@
         <div class="date-ctnr">
             <img src="assets/images/icons/calendar.png" alt="Calendar" id="calendar-icon">
             <div id="date-picker-container" style="display: none;">
-                <!-- Your date picker interface here -->
+                <!--  date picker interface here -->
                 <input type="date" id="date-picker">
             </div>
             <div id="date-text"></div>
         </div>
         <div class="selection-booking-ctnr">
+            <div class="theatre-list-ctnr">
+                <div class="no-lcn">Select your nearby location</div>
 
+                <!-- Theatre details will be dynamically populated here -->
+            </div>
         </div>
     </main>
 
     <script>
+        // Theatre data
+        const theatresData = {
+            Kochi: [
+                {
+                    name: 'Cinepolis: Centre Square Mall, Kochi',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                },
+                {
+                    name: 'Aashirvad Cineplexx: Perumbavoor',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                },
+                {
+                    name: 'PVR: Oberon Mall, Kochi',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                },
+                {
+                    name: 'Padma Cinema: Kochi',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                }
+            ],
+            Thiruvananthapuram: [
+                {
+                    name: 'Ariesplex SL Cinemas Cinionic Dolby Atmos',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                },
+                {
+                    name: 'HK Cinemas: Pothencode',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                },
+                {
+                    name: 'PVR: Lulu, Trivandrum',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                },
+                {
+                    name: 'SR Cinema: Varkkala',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                }
+            ],
+            Kozhikode: [
+                {
+                    name: 'Aashirvad Cineplexx: Kozhikode',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                },
+                {
+                    name: 'Surabhi Cinemas: Kozhikode',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                },
+                {
+                    name: 'ARC Coronation 4K Dolby Atmos',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                },
+                {
+                    name: 'E Max Cinemas Dolby Atmos RGB Laser: Calicut',
+                    times: ['10:00 AM', '2:00 PM', '6:00 PM']
+                }
+            ],
+        };
+
         // Get the current date
         const currentDate = new Date();
         const calendarIcon = document.getElementById('calendar-icon');
@@ -114,7 +175,59 @@
             toggleDatePicker(); // Hide the date picker container after selection
         });
 
-    </script>
+        //   Function to update theatre infromation
+        function updateTheatreInfo(location) {
+            const theatreListContainer = document.querySelector('.theatre-list-ctnr');
+            theatreListContainer.innerHTML = ''; // Clear previous content
+
+            if (location === '') {
+                const noLocation = document.createElement('div');
+                noLocation.classList.add('no-lcn');
+
+
+                noLocation.textContent = 'Select your nearby location';
+                theatreListContainer.appendChild(noLocation);
+            } else {
+                console.log(location);
+
+                if (theatresData[location]) {
+                    const theatre = theatresData[location];
+
+                    for (let i = 0; i < theatre.length; i++) {
+                        const theatreContainer = document.createElement('div');
+                        theatreContainer.classList.add('theatre-ctnr');
+
+                        const theatreName = document.createElement('div');
+                        theatreName.classList.add('theatre-name');
+                        theatreName.textContent = theatre[i].name;
+
+                        const showTimes = document.createElement('div');
+                        showTimes.classList.add('show-times');
+
+                        // Show times
+                        const showTimesHTML = theatre[i].times.map(time => `<button class="show-tms-button">${time}</button>`).join('');
+                        showTimes.innerHTML = showTimesHTML;
+
+                        theatreContainer.appendChild(theatreName);
+                        theatreContainer.appendChild(showTimes);
+                        theatreListContainer.appendChild(theatreContainer);
+
+                        // Add <hr> between theatres except for the last one
+                        if (i < theatre.length - 1) {
+                            const hrElement = document.createElement('hr');
+                            theatreListContainer.appendChild(hrElement);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Event listener for location select
+        const locationSelect = document.getElementById('locationSelect');
+        locationSelect.addEventListener('change', function () {
+            const selectedLocation = this.value;
+            updateTheatreInfo(selectedLocation);
+        });   </script>
 </body>
 
 </html>
