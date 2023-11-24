@@ -595,9 +595,14 @@ main {
     flex: 1;
 }
 
+.news-details a{
+    text-decoration: none;
+}
+
 .news-item h1 {
     color: #000;
     margin-top: 0;
+    
 }
 
 .news-item h1:hover{
@@ -623,9 +628,15 @@ main {
 .date-info img{
     height: 1rem;
     width: 1rem;
-    margin-right: 5px; /* Adjust margin as needed */
+    margin-right: 5px; 
 
 }
+
+
+/* =================== NEWS DETAILS PAGE ================= */
+
+
+
 
 
 /* ================= Book Ticket Page ================== */
