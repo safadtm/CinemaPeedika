@@ -108,8 +108,8 @@
         }
 
         // Get the ID from the URL parameter
-        const newsId = getUrlParameter('id');
-
+        const newsId = parseInt(getUrlParameter('id'));
+        
         function fetchAndPopulateNewsDetails() {
             fetch('assets/JSON/news.json')
                 .then(response => {
@@ -121,7 +121,7 @@
                 .then(newsData => {
                     console.log(newsId);
                     const selectedNews = newsData.find(news => news.id === newsId);
-                    
+
                     if (selectedNews) {
                         // Update HTML elements with the retrieved news details
                         document.querySelector('.news-image').src = selectedNews.imgSrc;
