@@ -93,9 +93,58 @@
             margin: 1rem 0;
         }
 
-        .amount-row{
+        .amount-row {
             display: flex;
             justify-content: space-between;
+        }
+
+        .success-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+        }
+
+        .success-content {
+            text-align: center;
+            padding: 40px;
+            /* background-color: #fff; */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background-image: url('assets/images/icons/check.png');
+            background-size: cover;
+            animation: icon-rotate 2s linear infinite;
+            border-radius: 50%;
+        }
+
+        @keyframes icon-rotate {
+            0% {
+                transform: rotateY(0deg);
+                /* Initial rotation position */
+            }
+
+            100% {
+                transform: rotateY(360deg);
+                /* One full rotation around the Y-axis */
+            }
+        }
+
+
+        .success-content h1 {
+            color: #27ae60;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .success-content p {
+            color: #333;
+            margin-bottom: 20px;
         }
     </style>
 
@@ -107,9 +156,22 @@
         <div class="confirmation-ctnr">
 
             <div class="inner-confirmation-ctnr">
+                <!-- <div class="success-icon"></div>
                 <div id="title">Booking Confirmed!</div>
                 <div class="confirmation-buttons">
                     <button id="closeButton" type="button">Close</button>
+                </div> -->
+
+                <div class="success-container">
+                    <div class="success-content">
+                        <div class="success-icon"></div>
+                        <h1>Booking Confirmed!</h1>
+                        <p>Your ticket has been successfully booked.</p>
+                        <p>Thank you for choosing our service.</p>
+                        <div class="confirmation-buttons">
+                            <button id="closeButton" type="button">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
