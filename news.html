@@ -15,7 +15,7 @@
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
 </head>
 
-<body>
+<body >
     <!-- ============= HEADER ============ -->
     <header>
         <div class="navbar">
@@ -44,22 +44,63 @@
     <section>
         <div class="news-container">
             <h2>Latest News</h2>
-            <div class="news-item">
-                <img src="" alt="News Image">
-                <div class="news-details">
-                    <a href="news_details.html">
-                        <h1>Headlines goes here</h1>
-                    </a>
-                    <p class="date-info"><img src="assets/images/icons/clock.png" class="clock-icon" alt="">date here</p>
-
-                </div>
-            </div>
-            
 
         </div>
     </section>
 
     <script>
+        // Function to fetch news data and populate HTML
+        function fetchAndPopulateNews() {
+            fetch('assets/JSON/news.json')
+                .then(response => response.json())
+                .then(newsData => {
+                    const newsContainer = document.querySelector('.news-container');
+                    newsData.forEach(news => {
+                        const newsItem = document.createElement('div');
+                        newsItem.classList.add('news-item');
+
+                        const newsImg = document.createElement('img');
+                        newsImg.src = news.imgSrc;
+                        newsImg.alt = 'News Image';
+
+                        const newsDetails = document.createElement('div');
+                        newsDetails.classList.add('news-details');
+
+                        const newsLink = document.createElement('a');
+                        newsLink.href = `news_details.html?id=${news.id}`; // Redirects to specific news details page
+
+                        
+                        const newsHeadline = document.createElement('h1');
+                        newsHeadline.textContent = news.headline;
+                        newsLink.appendChild(newsHeadline);
+
+                        const dateInfo = document.createElement('p');
+                        dateInfo.classList.add('date-info');
+                        const clockIcon = document.createElement('img');
+                        clockIcon.src = 'assets/images/icons/clock.png';
+                        clockIcon.classList.add('clock-icon');
+                        clockIcon.alt = 'Clock Icon';
+                        const dateText = document.createTextNode(news.date);
+                        dateInfo.appendChild(clockIcon);
+                        dateInfo.appendChild(dateText);
+
+                        newsDetails.appendChild(newsLink);
+                        newsDetails.appendChild(dateInfo);
+
+                        newsItem.appendChild(newsImg);
+                        newsItem.appendChild(newsDetails);
+
+                        newsContainer.appendChild(newsItem);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching news data:', error);
+                });
+        }
+
+        // Call the function to fetch and populate the news
+        fetchAndPopulateNews();
+
 
     </script>
 </body>

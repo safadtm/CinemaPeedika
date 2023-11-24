@@ -86,28 +86,59 @@
     </header>
     <section>
         <div class="news-details-page">
-            <img src="assets/images/news-images/Prabhas-says-Animal-a-Mental-film.png" alt="News Image"
-                class="news-image">
-            <h1 class="news-heading">Prabhas says Animal a Mental film !</h1>
+            <img src="" alt="News Image" class="news-image">
+            <h1 class="news-heading"></h1>
             <hr class="divider">
             <p class="news-description">
-                Pradeep Ranganathan shot into fame with Love Today is now turned out to be a complete actor with his
-                next film in the direction of Vignesh Shivan and an official launch is awaited.
-            </p>
-            <p class="news-description"> Here is an interesting update is that, Vignesh Shivan has roped in Mysskin and SJ Suryah for key roles
-                in Pradeep Ranganathan’s film where they see them in important sequences. This yet to be titled film is
-                all set to begin its first schedule of shoot in the month of December and release in 2024. Stick on this
-                space for more updates on the movie.
             </p>
             <p class="news-description">
-                It is also being rumored that Nayantara is also expected to play an special cameo character in this full
-                length comedy entertainer. However lets wait for an official confirmation from the makers end soon. </p>
+            </p>
+            <p class="news-description"></p>
         </div>
 
     </section>
 
     <script>
+        // Function to get URL parameters by name
+        function getUrlParameter(name) {
+            name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
 
+        // Get the ID from the URL parameter
+        const newsId = getUrlParameter('id');
+
+        function fetchAndPopulateNewsDetails() {
+            fetch('assets/JSON/news.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(newsData => {
+                    console.log(newsId);
+                    const selectedNews = newsData.find(news => news.id === newsId);
+                    
+                    if (selectedNews) {
+                        // Update HTML elements with the retrieved news details
+                        document.querySelector('.news-image').src = selectedNews.imgSrc;
+                        document.querySelector('.news-heading').textContent = selectedNews.headline;
+                        document.querySelectorAll('.news-description')[0].textContent = selectedNews.p1;
+                        document.querySelectorAll('.news-description')[1].textContent = selectedNews.p2;
+                        document.querySelectorAll('.news-description')[2].textContent = selectedNews.p3;
+                    } else {
+                        console.error('News ID not found or invalid');
+                    }
+
+                }).catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+        }
+
+        fetchAndPopulateNewsDetails();
     </script>
 </body>
 
