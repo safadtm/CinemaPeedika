@@ -37,7 +37,7 @@
                     <li><a href="booktickets.html">Book Tickets</a></li>
                     <li><input class="search" type="text" placeholder="Search"></li>
                     <li>
-                        <a href="signin.html"><button class="signup-button homepage-signin-btn" type="submit"
+                        <a href="signin.html"><button class="signup-button homepage-signin-btn username-show" type="submit"
                                 id="signin-button">New User?</button>
                         </a>
                     </li>
@@ -143,6 +143,23 @@
 
     <!-- Javascript script tag -->
     <script src="assets/js/script.js"></script>
+    <script>
+        // Assuming you have retrieved the username from local storage
+        const storedUser = JSON.parse(localStorage.getItem('user')); // Retrieve user data from localStorage
+        const username = storedUser ? storedUser.username : null; // Get the username if available
+        console.log(username);
+
+        // Get the element with the class name 'username-show'
+        const usernameShow = document.querySelector('.username-show');
+
+        // Update the content of the element based on the presence of the username
+        if (username) {
+            usernameShow.textContent = `Welcome, ${username}!`; // Change the content to display the username
+        } else {
+            usernameShow.textContent = 'Welcome, User!'; // Set a default message for users without a username
+        }
+
+    </script>
 </body>
 
 </html>

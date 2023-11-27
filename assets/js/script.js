@@ -27,6 +27,7 @@ const isValidEmail = email => {
 // Local Storage
 let user;
 let isUserLoggedIn = false;
+let name;
 
 // validation
 function setupSignUpValidation() {
@@ -91,12 +92,13 @@ function setupSignUpValidation() {
                 password: signUpPasswordValue,
                 username: signUpUsernameValue,
             };
-            
+
             localStorage.setItem("user", JSON.stringify(user));
-            isUserLoggedIn = true;
-            
+            console.log(user);
+            // isUserLoggedIn = true;
+
             // submit the form
-            // signUpForm.submit();
+            signUpForm.submit();
 
         }
     };
@@ -135,7 +137,7 @@ function setupSignInValidation() {
             setError(signInEmail, 'Email is required');
         } else if (!isValidEmail(signInEmailValue)) {
             setError(signInEmail, 'Provide a valid Email address');
-        }else if(signInEmailValue!=email){
+        } else if (signInEmailValue != email) {
             setError(signInEmail, 'Email doesnt exist!!!!');
         } else {
             setSuccess(signInEmail);
@@ -145,17 +147,16 @@ function setupSignInValidation() {
             setError(signInPassword, 'Password is required');
         } else if (signInPasswordValue.length < 8) {
             setError(signInPassword, 'Password must be at least 8 character.')
-        }else if(signInPasswordValue!=password){
+        } else if (signInPasswordValue != password) {
             setError(signInPassword, 'Incorrect Password')
         } else {
             setSuccess(signInPassword);
         }
 
         if (document.querySelectorAll('.success').length === 2) {
-            
-            isUserLoggedIn = true;
+
             // submit the form
-            // signInForm.submit();
+            signInForm.submit();
         }
     };
 }
@@ -167,17 +168,17 @@ function setupSignInValidation() {
 document.addEventListener('DOMContentLoaded', function () {
     setupSignUpValidation();
     setupSignInValidation();
-    if (isUserLoggedIn) {
-        // The user is logged in
-        console.log('User is logged in');
-        // You can perform actions for a logged-in user here.
-    } else {
-        // The user is not logged in
-        console.log('User is not logged in');
-        // You can perform actions for a user who is not logged in here.
-    }
-    
-    
+    // if (isUserLoggedIn) {
+    //     // The user is logged in
+    //     console.log('User is logged in');
+    //     // You can perform actions for a logged-in user here.
+    // } else {
+    //     // The user is not logged in
+    //     console.log('User is not logged in');
+    //     // You can perform actions for a user who is not logged in here.
+    // }
+
+
 });
 
 
