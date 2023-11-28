@@ -1,0 +1,18 @@
+id
+movie name
+year
+duration
+rating
+trailer
+poster
+banner
+genres
+short description
+director
+writers
+stars
+p1 - paragraph 1
+p2 - paragraph 2
+p3 - paragraph 3
+p4 - paragraph 4
+p5 - paragraph 5
