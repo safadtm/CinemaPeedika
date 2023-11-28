@@ -433,6 +433,10 @@ main {
     height: 200px;
 }
 
+.movies-grid-container,.tv-shows-container a{
+    text-decoration: none;
+}
+
 .tv-shows-container {
     margin: 10px 0px;
 

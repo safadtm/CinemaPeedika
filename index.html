@@ -37,8 +37,8 @@
                     <li><a href="booktickets.html">Book Tickets</a></li>
                     <li><input class="search" type="text" placeholder="Search"></li>
                     <li>
-                        <a href="signin.html"><button class="signup-button homepage-signin-btn username-show" type="submit"
-                                id="signin-button"></button>
+                        <a href="signin.html"><button class="signup-button homepage-signin-btn username-show"
+                                type="submit" id="signin-button"></button>
                         </a>
                     </li>
                 </ul>
@@ -81,18 +81,22 @@
         <div class="movies-grid-container">
             <h3>Movies</h3>
             <div class="movies-grid-poster">
-                <div class="poster-card">
-                    <img src="assets/images/movies/banners/markantony.jpg" alt="">
+                <!-- <div class="poster-card">
+                    <a href="moviepage.html"><img src="assets/images/movies/banners/markantony.jpg" alt=""></a>
+
                 </div>
                 <div class="poster-card">
-                    <img src="assets/images/movies/banners/jialer.jpg" alt="">
+                    <a href="moviepage.html"> <img src="assets/images/movies/banners/jialer.jpg" alt=""></a>
+
                 </div>
                 <div class="poster-card">
-                    <img src="assets/images/movies/banners/kala.jpg" alt="">
+                    <a href="moviepage.html"> <img src="assets/images/movies/banners/kala.jpg" alt=""></a>
+
                 </div>
                 <div class="poster-card">
-                    <img src="assets/images/movies/banners/kanatara.jpg" alt="">
-                </div>
+                    <a href="moviepage.html"><img src="assets/images/movies/banners/kanatara.jpg" alt=""></a>
+
+                </div> -->
             </div>
 
         </div>
@@ -101,18 +105,22 @@
         <div class="tv-shows-container">
             <h3>TV Shows</h3>
             <div class="tv-shows-poster">
-                <div class="poster-card">
-                    <img src="assets/images/movies/banners/familyman.jpg" alt="">
+                <!-- <div class="poster-card">
+                    <a href="moviepage.html"><img src="assets/images/movies/banners/familyman.jpg" alt=""></a>
+
                 </div>
                 <div class="poster-card">
-                    <img src="assets/images/movies/banners/genv.jpg" alt="">
+                    <a href="moviepage.html"> <img src="assets/images/movies/banners/genv.jpg" alt="">
+                    </a>
                 </div>
                 <div class="poster-card">
-                    <img src="assets/images/movies/banners/mirzapur.jpg" alt="">
+                    <a href="moviepage.html"> <img src="assets/images/movies/banners/mirzapur.jpg" alt="">
+                    </a>
                 </div>
                 <div class="poster-card">
-                    <img src="assets/images/movies/banners/theboys.jpeg" alt="">
-                </div>
+                    <a href="moviepage.html"> <img src="assets/images/movies/banners/theboys.jpeg" alt="">
+                    </a>
+                </div> -->
             </div>
         </div>
 
@@ -153,7 +161,7 @@
         const usernameShow = document.querySelector('.username-show');
 
         // Update the content of the element based on the presence of the username
-        if(!storedUser){
+        if (!storedUser) {
             usernameShow.textContent = `New User?`;
         }
         else if (username) {
@@ -161,6 +169,46 @@
         } else {
             usernameShow.textContent = 'Welcome, User!'; // Set a default message for users without a username
         }
+
+
+        // Fetching movie data 
+        const moviesGrid = document.querySelector('.movies-grid-poster');
+        const tvShowsGrid = document.querySelector('.tv-shows-poster');
+
+        fetch('assets/JSON/movies.json')
+            .then(response => response.json())
+            .then(data => {
+                const movies = data.filter(movie => movie.id >= 2 && movie.id <= 5);
+                const tvShows = data.filter(movie => movie.id >= 6 && movie.id <= 9);
+
+                const createPosterCard = (container, movie) => {
+                    const posterCard = document.createElement('div');
+                    posterCard.classList.add('poster-card');
+
+                    const link = document.createElement('a');
+                    link.href = 'moviepage.html?id=${movie.id}';
+
+                    const image = document.createElement('img');
+                    image.src = movie.banner;
+                    image.alt = movie.title;
+
+                    link.appendChild(image);
+                    posterCard.appendChild(link);
+                    container.appendChild(posterCard);
+                };
+
+                movies.forEach(movie => {
+                    createPosterCard(moviesGrid, movie);
+                });
+
+                tvShows.forEach(movie => {
+                    createPosterCard(tvShowsGrid, movie);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching movies data:', error);
+            });
+
 
     </script>
 </body>
