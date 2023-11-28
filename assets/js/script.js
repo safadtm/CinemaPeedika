@@ -115,50 +115,97 @@ function setupSignInValidation() {
         return; // The sign-in form doesn't exist on this page, so exit the function
     }
 
-    // Rest of your sign-in validation code here
     signInForm.addEventListener('submit', e => {
         e.preventDefault();
         validateSignInInputs();
     });
 
     // ...
+    // const validateSignInInputs = () => {
+    //     const signInEmailValue = signInEmail.value.trim();
+    //     const signInPasswordValue = signInPassword.value.trim();
+
+    //     if (signInEmailValue === '') {
+    //         setError(signInEmail, 'Email is required');
+    //     } else if (!isValidEmail(signInEmailValue)) {
+    //         setError(signInEmail, 'Provide a valid Email address');
+    //     }
+    //     if (signInPasswordValue === '') {
+    //         setError(signInPassword, 'Password is required');
+    //     }
+
+    //     // Fetching data from local storage
+    //     const storedUserData = localStorage.getItem("user");
+    //     const storedUser = storedUserData ? JSON.parse(storedUserData) : null;
+
+    //     if (!storedUser || !storedUser.email) {
+    //         setError(signInEmail, 'No user or email found in storage');
+    //     } else if (!storedUser.password) {
+    //         setError(signInPassword, 'No password found in storage');
+    //     }
+        
+    //     const email = storedUser.email;
+    //     const password = storedUser.password;
+
+
+    //     if (signInEmailValue != email) {
+    //         setError(signInEmail, 'Email doesnt exist!!!!');
+    //     } else {
+    //         setSuccess(signInEmail);
+    //     }
+    //     if (signInPasswordValue.length < 8) {
+    //         setError(signInPassword, 'Password must be at least 8 character.')
+    //     } else if (signInPasswordValue != password) {
+    //         setError(signInPassword, 'Incorrect Password')
+    //     } else {
+    //         setSuccess(signInPassword);
+    //     }
+
+    //     if (document.querySelectorAll('.success').length === 2) {
+
+    //         // submit the form
+    //         signInForm.submit();
+    //     }
+    // };
+
     const validateSignInInputs = () => {
         const signInEmailValue = signInEmail.value.trim();
         const signInPasswordValue = signInPassword.value.trim();
-
-        // Fetching data from local storage
-        const storedUserData = localStorage.getItem("user"); // Retrieve the user data as a string from local storage
-        const storedUser = JSON.parse(storedUserData); // Parse the string into a JavaScript object
-        const username = storedUser.username;
-        const email = storedUser.email;
-        const password = storedUser.password;
-
+    
+        const storedUserData = localStorage.getItem("user");
+        const storedUser = storedUserData ? JSON.parse(storedUserData) : null;
+    
         if (signInEmailValue === '') {
             setError(signInEmail, 'Email is required');
         } else if (!isValidEmail(signInEmailValue)) {
             setError(signInEmail, 'Provide a valid Email address');
-        } else if (signInEmailValue != email) {
-            setError(signInEmail, 'Email doesnt exist!!!!');
+        } else if (storedUser && signInEmailValue !== storedUser.email) {
+            setError(signInEmail, 'Email does not exist');
         } else {
             setSuccess(signInEmail);
         }
-
+    
         if (signInPasswordValue === '') {
             setError(signInPassword, 'Password is required');
         } else if (signInPasswordValue.length < 8) {
-            setError(signInPassword, 'Password must be at least 8 character.')
-        } else if (signInPasswordValue != password) {
-            setError(signInPassword, 'Incorrect Password')
+            setError(signInPassword, 'Password must be at least 8 characters');
+        } else if (storedUser && signInPasswordValue !== storedUser.password) {
+            setError(signInPassword, 'Incorrect Password');
         } else {
             setSuccess(signInPassword);
         }
-
+    
         if (document.querySelectorAll('.success').length === 2) {
-
-            // submit the form
-            signInForm.submit();
-        }
+            // User successfully logged in
+            // isUserLoggedIn = true;
+            signInForm.submit();        }
     };
+    
+    
+    
+    
+    
+    
 }
 
 

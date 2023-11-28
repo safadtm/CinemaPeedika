@@ -38,7 +38,7 @@
                     <li><input class="search" type="text" placeholder="Search"></li>
                     <li>
                         <a href="signin.html"><button class="signup-button homepage-signin-btn username-show" type="submit"
-                                id="signin-button">New User?</button>
+                                id="signin-button"></button>
                         </a>
                     </li>
                 </ul>
@@ -153,7 +153,10 @@
         const usernameShow = document.querySelector('.username-show');
 
         // Update the content of the element based on the presence of the username
-        if (username) {
+        if(!storedUser){
+            usernameShow.textContent = `New User?`;
+        }
+        else if (username) {
             usernameShow.textContent = `Welcome, ${username}!`; // Change the content to display the username
         } else {
             usernameShow.textContent = 'Welcome, User!'; // Set a default message for users without a username
