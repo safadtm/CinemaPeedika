@@ -81,22 +81,6 @@
         <div class="movies-grid-container">
             <h3>Movies</h3>
             <div class="movies-grid-poster">
-                <!-- <div class="poster-card">
-                    <a href="moviepage.html"><img src="assets/images/movies/banners/markantony.jpg" alt=""></a>
-
-                </div>
-                <div class="poster-card">
-                    <a href="moviepage.html"> <img src="assets/images/movies/banners/jialer.jpg" alt=""></a>
-
-                </div>
-                <div class="poster-card">
-                    <a href="moviepage.html"> <img src="assets/images/movies/banners/kala.jpg" alt=""></a>
-
-                </div>
-                <div class="poster-card">
-                    <a href="moviepage.html"><img src="assets/images/movies/banners/kanatara.jpg" alt=""></a>
-
-                </div> -->
             </div>
 
         </div>
@@ -105,22 +89,6 @@
         <div class="tv-shows-container">
             <h3>TV Shows</h3>
             <div class="tv-shows-poster">
-                <!-- <div class="poster-card">
-                    <a href="moviepage.html"><img src="assets/images/movies/banners/familyman.jpg" alt=""></a>
-
-                </div>
-                <div class="poster-card">
-                    <a href="moviepage.html"> <img src="assets/images/movies/banners/genv.jpg" alt="">
-                    </a>
-                </div>
-                <div class="poster-card">
-                    <a href="moviepage.html"> <img src="assets/images/movies/banners/mirzapur.jpg" alt="">
-                    </a>
-                </div>
-                <div class="poster-card">
-                    <a href="moviepage.html"> <img src="assets/images/movies/banners/theboys.jpeg" alt="">
-                    </a>
-                </div> -->
             </div>
         </div>
 
@@ -178,6 +146,12 @@
         fetch('assets/JSON/movies.json')
             .then(response => response.json())
             .then(data => {
+                const movie = data.find(movie => movie.id === 1); // Get the movie with ID 1
+
+                // Update the HTML elements with dynamic data
+                document.querySelector('.movie-details-container h1').textContent = movie.movieName;
+                document.querySelector('.movie-banner-img img').src = movie.banner;
+
                 const movies = data.filter(movie => movie.id >= 2 && movie.id <= 5);
                 const tvShows = data.filter(movie => movie.id >= 6 && movie.id <= 9);
 
