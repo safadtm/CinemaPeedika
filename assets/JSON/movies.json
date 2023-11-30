@@ -7,7 +7,7 @@
     "rating": 8.6,
     "trailer": "assets/Trailers/Jigarthanda.mp4",
     "poster": "assets/images/movies/posters/jigarthanda.jpg",
-    "banner": "/assets/images/movies/background/jigarthanda-banner.jpg",
+    "banner": "assets/images/movies/background/jigarthanda-banner.jpg",
     "genres": [
       "Action",
       "Comedy",
@@ -35,7 +35,7 @@
     "year": 2023,
     "duration": "2h 52min",
     "rating": 8.6,
-    "trailer": "",
+    "trailer": "assets/Trailers/trailer.mp4",
     "poster": "assets/images/movies/posters/markantonyposter.jpg",
     "banner": "assets/images/movies/banners/markantony.jpg",
     "genres": [
@@ -43,21 +43,23 @@
       "Comedy",
       "Drama"
     ],
-    "shortDescription": "",
-    "director": "",
+    "shortDescription": "Two gangsters, Mark and Antony acquire a mobile phone that has the ability to time travel.",
+    "director": "Adhik Ravichandran",
     "writers": [
-      ""
+      "SJ Arjun",
+      "Savari Muthu",
+      "Adhik Ravichandran"
     ],
     "stars": [
-      "",
-      "",
-      ""
+      "Vishal",
+      "S.J Suryah",
+      "Ritu Varma"
     ],
-    "productionLink": "https://en.wikipedia.org/wiki/Jigarthanda_DoubleX#Production",
-    "p1": "",
-    "p2": "",
-    "p3": "",
-    "p4": ""
+    "productionLink": "https://en.wikipedia.org/wiki/MarkAntony#Production",
+    "p1": "1975: A scientist named Chiranjeevi invents a telephone that enables its users to make calls to the past timeline once a day and alter history. Meanwhile, Antony and Jackie Pandian are best friends and gangsters in Chennai, who have a common enemy named Ekambaram, who is also a gangster. Ekambaram decides to take revenge against Antony for killing his brother and he kills Antony in a club, also resulting in Chiranjeevi getting killed. Jackie soon becomes the solo kingpin and adopts Antony's son Mark as his own son.",
+    "p2": "1995: Mark is a skilled mechanic in Royapuram who berates Antony for being responsible for his mother Vedhavalli's death. One day, Mark finds Chiranjeevi's telephone and realises that he can make calls to the past and alter the whole course of history. Mark soon finds that Antony was not a bad person and was made to believe by Jackie, who is actually the main mastermind behind Antony and Vedhavalli's deaths, as Antony refused Jackie's involvement in illegal activities like drug smuggling, arms trafficking and prostitution. Mark manages to change history by making calls to the past, where Jackie is killed.",
+    "p3": "Mark soon wakes up in the present to find that he is in Jackie's place as a gangster while Jackie's son Madhan is in Mark's place as a mechanic. Madhan soon learns about the telephone and Mark's involvement in changing the history previously, which he informs to Jackie. A cat-and-mouse game ensues where Jackie makes various attempts to kill Antony, but Antony survives all the attempts and learns about Jackie's true intentions. Jackie and his men surround Antony at the club and he is seemingly killed. Mark again wakes up in the present and find himself back as a mechanic while Jackie is still alive.",
+    "p4": "Madhan kidnaps Mark's girlfriend Ramya and asks him to come to the club godown. Mark arrives and is thrashed by Madhan and Jackie's men. However, Antony arrives at the godown, where it is revealed that Ekambaram saved Antony in the club shootout and had sent him to Colombia due to many encounter killings of gangsters by the police. Antony gained the partnership of the Colombian underworld as Jackie usually sent commission to the gangsters under Antony's name. Antony kills all of Jackie's henchmen at the godown by using his secret weapon called Anaconda, where he finally kills Jackie and Madhan. Antony reunites with Mark and calls Vedhavalli in the past, who is held at gunpoint by Chiranjeevi (wanting his phone back) and Jackie."
   },
   {
     "id": 3,
@@ -65,29 +67,29 @@
     "year": 2023,
     "duration": "2h 52min",
     "rating": 8.6,
-    "trailer": "",
-    "poster": "",
+    "trailer": "assets/Trailers/jailertrailer.mp4",
+    "poster": "assets/images/movies/posters/jailerposter.jpg",
     "banner": "assets/images/movies/banners/jialer.jpg",
     "genres": [
       "Action",
       "Comedy",
       "Drama"
     ],
-    "shortDescription": "",
-    "director": "",
+    "shortDescription": "A retired jailer goes on a manhunt to find his son's killers. But the road leads him to a familiar, albeit a bit darker place. Can he emerge from this complex situation successfully?",
+    "director": "Nelson Dilipkumar",
     "writers": [
-      ""
+      "Nelson Dilipkumar"
     ],
     "stars": [
-      "",
-      "",
-      ""
+      "Rajinikanth",
+      "Mohanlal",
+      "Shivarajkumar"
     ],
-    "productionLink": "https://en.wikipedia.org/wiki/Jigarthanda_DoubleX#Production",
-    "p1": "",
-    "p2": "",
-    "p3": "",
-    "p4": ""
+    "productionLink": "https://en.wikipedia.org/wiki/Jailer#Production",
+    "p1": "Muthuvel Pandian (Rajinikanth) is a retired police officer who lives in Kodambakkam with his family. Muthuvel's son, ACP Arjun (Vasanth Ravi), is investigating Varman (Vinayakan), an eccentric gangster who smuggles idols of gods and sells them to buyers overseas, operating from his base of operations in Arakkonam. Vijaya (Ramya Krishnan) is Muthuvel's wife, while Swetha (Mirnaa Menon) is Arjun's wife.",
+    "p2": "Arjun has seized a container full of Varman's stolen idols from temples all over the country. Varman is livid and sends his henchman Seenu to deal with Arjun. Arjun confronts Varman's henchman, Seenu (Saravanan) and demands him about the whereabouts of Varman. Seenu abducts Muthuvel, but Muthuvel ends up thrashing the goons instead. Arjun arrests Seenu and beats him to get Varman's location. The whole department is worried that Arjun's actions will wake a sleeping devil. Seenu is released from police custody.",
+    "p3": "As Arjun gets closer to nabbing Varman, he suddenly goes missing and the police department spreads word that he may have committed suicide to cover up that he was probably killed by Varman. Grieving the loss of his son and partly blaming himself for raising him to be honest and fearless, Muthuvel goes after Seenu and murders him, disposing of the body with the help of a local taxi driver Vimal (Yogi Babu).",
+    "p4": "Varman's men make an attempt on Muthuvel's grandson, Rithvik (Rithvik), despite Muthuvel convincing Varman to leave him and his family alone. Varman vows to kills Muthuvel's entire family to set an example for his men. Enraged, Muthuvel decides to fight back. Muthuvel brutally beheads the 2 men sent by Varman to attack his grandson. He then shifts his family to a mental hospital for their safety. Muthuvel visits Narasimha (Shiva Rajkumar), a reformed criminal living in Mandya, who loans him four of his sharpshooters. With the help of Narasimha's men, Muthuvel blackmails and humiliates Varman. Muthuvel hijacks one of Varman's trucks which was full of stolen idols headed for the overseas markets. Varman was about to attack Muthuvel's family at the mental hospital, when Muthuvel informs Varman that he has knowledge of all his smuggling routes and vows to destroy his entire business if his family is not left alone. Muthuvel asks Varman to beg for Rs 10 from his family, as a price to release his hijacked truck.    "
   },
   {
     "id": 4,
@@ -95,28 +97,29 @@
     "year": 2023,
     "duration": "2h 52min",
     "rating": 8.6,
-    "trailer": "",
-    "poster": "",
+    "trailer": "assets/Trailers/kalatrailer.mp4",
+    "poster": "assets/images/movies/posters/kalaposter.jpg",
     "banner": "assets/images/movies/banners/kala.jpg",
     "genres": [
       "Action",
-      "Comedy",
+      "Thriller",
       "Drama"
     ],
-    "shortDescription": "",
-    "director": "",
+    "shortDescription": "A psychological thriller that revolves around Shaji who faces an intriguing conflict with the many layered shades of human behavior.",
+    "director": "Rohith V.S.",
     "writers": [
-      ""
+      "Yadhu Pushpakaran",
+      "Rohit V.S."
     ],
     "stars": [
-      "",
-      "",
-      ""
+      "Tovino Thomas",
+      "Moor",
+      "Lal"
     ],
-    "productionLink": "https://en.wikipedia.org/wiki/Jigarthanda_DoubleX#Production",
-    "p1": "",
-    "p2": "",
-    "p3": "",
+    "productionLink": "https://en.wikipedia.org/wiki/Kala#Production",
+    "p1": "Shaji is living in an isolated farmhouse with his wife Vidya Shaji, his young son and his Cane Corso black dog. He is in debts, due to the failure of his farming, and his father Raveendran, who had entrusted him to take care of the farming, has lost hope in him and is now considering him as completely useless and scolds him often. To manage the work in the farmland and to steal some of his father's peppercorns to clear his debt, Shaji hires a few Tamil workers through an acquaintance. Along with her brother, Vidya visits her parents' place to take off from her routine life for a while. As the workers begin working, an eerie atmosphere creeps in.",
+    "p2": "Shaji spots one of the worker boys spying on him and catches him. He learns that on a previous encounter, he had killed the boy's beloved dog without his knowledge, and the boy has now returned to avenge his loss. It is also revealed that all of the Tamil workers were once owners of the farmland. The land was then forcefully taken over by Raveendran. Shaji requests the boy to forget the incident and offers to buy him a new dog, but the boy is determined to seek revenge and swears to kill Shaji's dog. Shaji loses his temper and a fearsome fight ensues between both of them fighting for survival and vengeance.",
+    "p3": "When it starts raining, Shaji realizes that he has to shift peppercorn, where he locks the boy in a room and rushes dripping in blood. He unloads the peppercorn sacks outside the storage shed. When he returns to the room, he finds the boy missing. He gets furious when he sees the boy setting the peppercorn in a fire. They continue fighting where the boy easily gets the upper hand and makes Shaji run for his life. Finally, the boy makes Shaji feel the pain of his loss and is satisfied to have achieved his vengeance successfully. After this, the boy walks away with Shaji's dog happily.",
     "p4": ""
   },
   {
@@ -125,29 +128,31 @@
     "year": 2023,
     "duration": "2h 52min",
     "rating": 8.6,
-    "trailer": "",
-    "poster": "",
+    "trailer": "assets/Trailers/kantaratrailer.mp4",
+    "poster": "assets/images/movies/posters/kanataraposter.jpg",
     "banner": "assets/images/movies/banners/kanatara.jpg",
     "genres": [
       "Action",
-      "Comedy",
+      "Adventure",
       "Drama"
     ],
-    "shortDescription": "",
-    "director": "",
+    "shortDescription": "When greed paves the way for betrayal, scheming and murder, a young tribal reluctantly dons the traditions of his ancestors to seek justice.",
+    "director": "Rishab Shetty",
     "writers": [
-      ""
+      "Shanil Guru",
+      "Anirudh Mahesh",
+      "Sham Prasad"
     ],
     "stars": [
-      "",
-      "",
-      ""
+      "Rishab Shetty",
+      "Kishore Kumar G",
+      "Achyuth Kumar"
     ],
-    "productionLink": "https://en.wikipedia.org/wiki/Jigarthanda_DoubleX#Production",
-    "p1": "",
-    "p2": "",
-    "p3": "",
-    "p4": ""
+    "productionLink": "https://en.wikipedia.org/wiki/Production",
+    "p1": "In 1847, there lived a king (Vinay Biddappa) that had a great kingdom as well as a loving wife (Pragathi Rishab Shetty) and child, but could not find peace. He sets out on a journey to discover true happiness and comes upon a stone in a forest occupied by Panjurli Daiva, a deity that protects the villagers that reside in the forest. He donates vast amounts of his land to the villagers in exchange for taking the stone with him. Panjurli warns the king that his family and successors should keep their word and not reclaim the land, which will incur the wrath of Panjurli's companion, the ferocious Guliga Daiva.",
+    "p2": "In 1970, the King's successor asks a Bhoota Kola performer, who is possessed by Panjurli to make the locals hand over the land to him, which the performer refuses and states he will die vomiting blood if he tries to. The successor now lives in the city and knows that the value of the land has increased multi-fold. He needs to money to reclaim his lost royal status and lifestyle. The successor raises doubt on performer's possession by Panjurli, to which the performer replies he would vanish if he is possessed, after which he runs into the forest and is indeed never seen again. As warned, the king's successor dies mysteriously, vomiting blood a few months later on the steps of the court, where he was going to argue the land case.    ",
+    "p3": "In 1990, Murali (Kishore), a forest officer, is tasked with converting the villagers' land into a forest reserve. However, he is challenged by Shiva (Rishab Shetty), a Kambala athlete from the Kaadubettu village and the missing performer's son. Shiva is backed by his patron and the village's landlord, Devendra Suttooru (Achyuth Kumar), who is the king's successor in the present. Although Shiva is continually asked to perform the Bhoota Kola, he refuses due to the trauma of his father's disappearance. Sudhakara (Pramod Shetty) is Suttoo's PA. Sudhakara had rigged the results of the Kambala buffalo races to ensure that Shiva came in 2nd and Suttoo's buffaloes came first. Shiva beats up Sudhakara publicly and forces Suttoo to declare him the winner with a medal and motorbike as the prize. Kamala (Manasi Sudhir) is Shiva's mother. Shiva and his friends (Lacchu (Ranjan Saju), Raampa (Prakash Thuminad)) hunt wild boars on the forest land, while the villagers get supplies for Bhoot Kola from the forest. Murali objects to all of this and wants to fence off the forest area at the earliest. Devendra knows that Murali is tasked with identifying and fencing off the forest reserve. He tries to cozy upto Murali, but Murali is not a compromising type of person.",
+    "p4": "Shiva's cousin Guruva (Swaraj Shetty) takes his place at the hoot Kola. Murali and his staff start erecting a fence along the earmarked forest reserve. Shiva falls in love with a woman named Leela (Sapthami Gowda) and uses his connections with Devendra to appoint her as a forest guard. Leela also falls for Shiva and they both have sex. The villagers try to stop the fencing but the police and forest guards (including Leela) brutally suppress them, creating a rift between Leela and Shiva even though she was following orders and could do nothing about the situation. Murali wants the villagers to relocate their village outside of the forest area. Meanwhile Devendra helps launch a legal defense by gathering all the property papers of the villagers, to prove that the village is not an encroachment on the forest land. Devendra is helped by his lawyer (Naveen D Padil). Shiva continues to help DEvendra by helping him cut down trees inside the forest and transporting the wood outside to Devendra's mills."
   },
   {
     "id": 6,
@@ -155,28 +160,29 @@
     "year": 2023,
     "duration": "2h 52min",
     "rating": 8.6,
-    "trailer": "",
-    "poster": "",
+    "trailer": "assets/Trailers/familymantrailer.mp4",
+    "poster": "assets/images/movies/posters/familyposter.jpg",
     "banner": "assets/images/movies/banners/familyman.jpg",
     "genres": [
       "Action",
       "Comedy",
       "Drama"
     ],
-    "shortDescription": "",
-    "director": "",
+    "shortDescription": "A working man from the National Investigation Agency tries to protect the nation from terrorism, but he also needs to keep his family safe from his secret job.",
+    "director": "Raj & DK",
     "writers": [
-      ""
+      "Krishna D.K",
+      "Raj Nidimoru"
     ],
     "stars": [
-      "",
-      "",
-      ""
+      "Manoj Bajpayee",
+      "Samntha Ruth Prabhu",
+      "Priyamani"
     ],
-    "productionLink": "https://en.wikipedia.org/wiki/Jigarthanda_DoubleX#Production",
-    "p1": "",
-    "p2": "",
-    "p3": "",
+    "productionLink": "https://en.wikipedia.org/wiki/Production",
+    "p1": "The Family Man follows the story of Srikant Tiwari, who works as a senior officer in the Threat Analysis and Surveillance Cell (TASC), along with his best friend and colleague JK Talpade, which is a part of the National Investigation Agency (NIA) of India. He is a married man with two kids. The first season follows an investigation of a potential terrorist attack, while simultaneously following his slightly unsettled family life. Srikant and JK, along with their subordinates Zoya, Milind and Jayesh, and Force One officer Imran Pasha work on stopping Mission Zulfiqar from succeeding.[12] The show is inspired by real life newspaper articles",
+    "p2": "The second season's story line focuses on a Tamil Tigers-esque military resistance from Sri Lanka and their plans for a freedom fight.",
+    "p3": "The third season preview at the end of season two seems to indicate a link between COVID-19 pandemic: China attacks the North-eastern states of India and they use COVID-19 as a distraction for the attack",
     "p4": ""
   },
   {
@@ -185,29 +191,31 @@
     "year": 2023,
     "duration": "2h 52min",
     "rating": 8.6,
-    "trailer": "",
-    "poster": "",
+    "trailer": "assets/Trailers/genvtrailer.mp4",
+    "poster": "assets/images/movies/posters/genvposter.jpg",
     "banner": "assets/images/movies/banners/genv.jpg",
     "genres": [
       "Action",
-      "Comedy",
-      "Drama"
+      "Adventure",
+      "Comedy"
     ],
-    "shortDescription": "",
-    "director": "",
+    "shortDescription": "From the world of The Boys comes Gen V, which explores the first generation of superheroes to know that their super powers are from Compound V. These heroes put their physical and moral boundaries to the test competing for the school's top ranking.",
+    "director": "Evan Goldberg",
     "writers": [
-      ""
+      "Evan Goldberg",
+      "Eric Kripke",
+      "Craig Rosenberg"
     ],
     "stars": [
-      "",
-      "",
-      ""
+      "Jaz Sinclair",
+      "Chance Perdomo",
+      "Lizze Broadway"
     ],
-    "productionLink": "https://en.wikipedia.org/wiki/Jigarthanda_DoubleX#Production",
-    "p1": "",
-    "p2": "",
-    "p3": "",
-    "p4": ""
+    "productionLink": "https://en.wikipedia.org/wiki/Production",
+    "p1": "At the Godolkin University School of Crimefighting, founded by Thomas Godolkin, young adult superheroes (supes) put their moral boundaries to the test by competing for the university’s top ranking and a chance to join The Seven, Vought International's elite superhero team. When the school’s dark secrets come to light, they must decide what kind of heroes they want to become",
+    "p2": "Eight years prior, Marie Moreau's hemokinesis manifests when she has her first period, during which she accidentally killed her parents, straining her relationship with her younger sister Annabeth. In the present, Marie is accepted into Godolkin University, an education facility for training future superheroes (supes). On her first day, Marie befriends her roommate Emma Meyer and becomes acquainted with upperclassmen Andre Anderson, Luke Riordan, Jordan Li, and Cate Dunlap. While attending a party, Marie saves a woman from bleeding out after Andre accidentally injures her with his magnetism manipulation. Despite gaining popularity on social media, Marie is expelled by Professor Richard Brink Brinkerhoff to protect the upperclassmen's reputations. She later returns to Brink's office to confront him, but finds he had been killed by Luke. Luke goes on a rampage while trying to kill Marie, but is stopped by Jordan and Andre. As he calms down, Luke whispers to Andre before he uses his pyrokinesis to commit suicide.",
+    "p3": "Vought International covers up Luke and Brink's deaths while Marie is given sole credit for stopping Luke and becomes the first freshman to enter Godolkin University's top 10 rankings. As she becomes acquainted with the university dean Indira Shetty, who offers her counsel, Emma befriends classmate Justine Garcia, who learns the secret behind Emma's size-shifting powers and publicly discloses the information on the internet. An angered Emma confronts Justine. Meanwhile, Andre and Cate launch an investigation into Luke's death and find a secret recording that reveals his younger brother Sam is being held in a hidden facility called the Woods, which is secretly run by Shetty. Andre breaks off to find information in Brink's office. After Marie learns Vought contacted Annabeth, who does not want anything to do with her, she withholds Jordan's involvement in Luke's suicide amidst a televised interview. Andre succeeds in locating the Woods, but is nearly caught by campus security before Cate intervenes",
+    "p4": "Three years prior, Luke and Cate visit Sam, who is enraged to learn that their powers came from Compound V and killed a security guard, before Luke and Cate calm him down. In the present, Andre and Cate discuss their discovery, during which she convinces him not to risk his own life and they have sex. Meanwhile, Marie returns to her dorm room to find a fatigued Emma. She attempts to counsel the latter, but they have an argument. The next day, Shetty invites Marie to a fundraiser gala being held in Brink's honor. Emma's mother attempts to talk her into doing a reality show, but she refuses. Emma later meets with Marie to reconcile. Andre convinces Emma to infiltrate the Woods for him. She successfully finds and speaks with Sam, but the security guards put the facility on alert and incapacitate him while Emma uses her powers to hide"
   },
   {
     "id": 8,
@@ -215,29 +223,30 @@
     "year": 2023,
     "duration": "2h 52min",
     "rating": 8.6,
-    "trailer": "",
-    "poster": "",
+    "trailer": "assets/Trailers/mirzapurtrailer.mp4",
+    "poster": "assets/images/movies/posters/mirzapurposter.jpg",
     "banner": "assets/images/movies/banners/mirzapur.jpg",
     "genres": [
       "Action",
-      "Comedy",
+      "Crime",
       "Drama"
     ],
-    "shortDescription": "",
-    "director": "",
+    "shortDescription": "A shocking incident at a wedding procession ignites a series of events entangling the lives of two families in the lawless city of Mirzapur.",
+    "director": "Puneet Krishna",
     "writers": [
-      ""
+      "Puneeth Krishna",
+      "Karan Anshuman"
     ],
     "stars": [
-      "",
-      "",
-      ""
+      "Pankaj Tripathi",
+      "Ali Fazal",
+      "Shwtha Tripathi"
     ],
-    "productionLink": "https://en.wikipedia.org/wiki/Jigarthanda_DoubleX#Production",
-    "p1": "",
-    "p2": "",
-    "p3": "",
-    "p4": ""
+    "productionLink": "https://en.wikipedia.org/wiki/Production",
+    "p1": "Mirzapur is a tale of trigger-happy gangsters with sharp minds and dry humour, where loyalties change in a flash and cold cash rules. Violence is an everyday occurrence where complete and utter dominance is the goal. Politicians, cops, lawyers, and mafia lords are involved in a complex web of relationships and rivalries.",
+    "p2": "Akhandanand Tripathi, also known as 'Kaleen Bhaiya', is a millionaire carpet exporter and the don of the city of Mirzapur, which lies in the hinterland, a lawless belt of Purvanchal in eastern India. Mirzapur is the most coveted seat of power in the region. The ruthless Tripathis have been the unchallenged rulers of Mirzapur since Satyananda Tripathi, Akhandanand's father, took the reins of the city twenty years ago in a bloody uprising.",
+    "p3": "Munna Tripathi, Akhandanand's son, is power hungry and will not stop at anything to inherit his father's legacy, an empire built on illegal gun trade and opium smuggling. But his own father believes him unready for seat.",
+    "p4": "Guddu and Bablu Pandit are the sons of the city's only righteous and upstanding lawyer and activist, Ramakant Pandit. Guddu and Bablu aspire for a better life, that breaks the drudgery of middle-class living, while Ramakant crusades to take on the mighty Tripathis."
   },
   {
     "id": 9,
@@ -245,28 +254,28 @@
     "year": 2023,
     "duration": "2h 52min",
     "rating": 8.6,
-    "trailer": "",
-    "poster": "",
+    "trailer": "assets/Trailers/boystrailer.mp4",
+    "poster": "assets/images/movies/posters/boysposter.jpg",
     "banner": "assets/images/movies/banners/theboys.jpeg",
     "genres": [
       "Action",
       "Comedy",
-      "Drama"
+      "Crime"
     ],
-    "shortDescription": "",
-    "director": "",
+    "shortDescription": "A group of vigilantes set out to take down corrupt superheroes who abuse their superpowers.",
+    "director": "Eric Kripike",
     "writers": [
-      ""
+      "Eric Kripike"
     ],
     "stars": [
-      "",
-      "",
-      ""
+      "Karl Urban",
+      "Jack Quaid",
+      "Antony Star"
     ],
-    "productionLink": "https://en.wikipedia.org/wiki/Jigarthanda_DoubleX#Production",
-    "p1": "",
-    "p2": "",
-    "p3": "",
-    "p4": ""
+    "productionLink": "https://en.wikipedia.org/wiki/Production",
+    "p1": "The Boys is set in a universe where super-powered individuals are recognized as heroes by the general public and work for a powerful corporation known as Vought International, which markets and monetizes them. Outside of their heroic personas, most are arrogant, selfish, and corrupt. The series primarily focuses on two groups: the Seven, Vought's premier superhero team, and the Boys, vigilantes looking to bring down Vought and its fake superheroes",
+    "p2": "The Boys are led by Billy Butcher, who despises all superheroes, and the Seven are led by the unstable and violent superheroes. At the start of the series, the Boys are joined by Hughie Campbell after the superhero A-Train accidentally kills his girlfriend while high on drugs. Elsewhere, the Seven are joined by Annie January, a young and hopeful heroine forced to face the truth about those she admires. ",
+    "p3": "Other members of the Seven include the disillusioned Queen Maeve, the insecure Deep, the mysterious Black Noir, and the white supremacist Stormfront. The Boys are rounded out by tactical planner Mother's MM Milk, weapons specialist Frenchie, and super-powered test subject Kimiko.",
+    "p4": "Overseeing the Seven is Vought executive Madelyn Stillwell, who is later succeeded by publicist Ashley Barrett, themselves overseen by Vought CEO Stan Edgar, who also maintains controlled governmental opposition via his adoptive daughter Congresswoman Victoria Neuman.so with all what's going on what is it that's going to happen is it enough or will murder and mayhem find it way?"
   }
 ]
