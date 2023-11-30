@@ -215,18 +215,9 @@ function setupSignInValidation() {
 document.addEventListener('DOMContentLoaded', function () {
     setupSignUpValidation();
     setupSignInValidation();
-    // if (isUserLoggedIn) {
-    //     // The user is logged in
-    //     console.log('User is logged in');
-    //     // You can perform actions for a logged-in user here.
-    // } else {
-    //     // The user is not logged in
-    //     console.log('User is not logged in');
-    //     // You can perform actions for a user who is not logged in here.
-    // }
-
-
 });
+
+// User Fetching
 
 
 //  BACK TO TOP ACTION //

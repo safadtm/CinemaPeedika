@@ -15,7 +15,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-
+    <style>
+        /* Style for the rating container */
+        .rating-container {
+            display: none;
+            /* Add your styling for the pop-up container */
+            /* This will be shown when the rate div is clicked */
+        }
+    </style>
 </head>
 
 <body>
@@ -35,8 +42,8 @@
                     <li><a href="booktickets.html">Book Tickets</a></li>
                     <li><input class="search" type="text" placeholder="Search"></li>
                     <li>
-                        <a href="signin.html"><button class="signup-button homepage-signin-btn" type="submit"
-                                id="signin-button">New User?</button>
+                        <a href="signin.html"><button class="signup-button homepage-signin-btn username-show"
+                                type="submit" id="signin-button"></button>
                         </a>
                     </li>
                 </ul>
@@ -81,7 +88,7 @@
                         <div class="ur-rating ">
                             <p class="subtitle">YOUR RATING</p>
 
-                            <div class="i-t-center flex" style="color: blue;">
+                            <div class="i-t-center flex" style="color: blue;" id="rate">
 
                                 <div>
                                     <iconify-icon icon="material-symbols:star-outline" style="color: blue;"
@@ -89,6 +96,16 @@
                                 </div>
                                 <div>
                                     <p><b class="font20">Rate</b></p>
+                                </div>
+                                <div class="rating-container" id="ratingContainer">
+                                    <header>Rate?</header>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -194,6 +211,24 @@
     <!-- Javascript script tag -->
     <script src="assets/js/script.js"></script>
     <script>
+        // Assuming you have retrieved the username from local storage
+        const storedUser = JSON.parse(localStorage.getItem('user')); // Retrieve user data from localStorage
+        const username = storedUser ? storedUser.username : null; // Get the username if available
+        console.log(username);
+
+        // Get the element with the class name 'username-show'
+        const usernameShow = document.querySelector('.username-show');
+
+        // Update the content of the element based on the presence of the username
+        if (!storedUser) {
+            usernameShow.textContent = `New User?`;
+        }
+        else if (username) {
+            usernameShow.textContent = `Welcome, ${username}!`; // Change the content to display the username
+        } else {
+            usernameShow.textContent = 'Welcome, User!'; // Set a default message for users without a username
+        }
+
         function getUrlParameter(name) {
             name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
             const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -254,6 +289,23 @@
         }
         fetchAndPopulateMovieDetails();
 
+
+
+        // Movie Rating
+        const rateDiv = document.getElementById('rate');
+        const ratingContainer = document.getElementById('ratingContainer');
+
+
+        rateDiv.addEventListener('click', () => {
+            console.log('Rating action clicked!');
+            if (ratingContainer.style.display === 'none') {
+                ratingContainer.style.display = 'block';
+                // Add your code to display the rating options or form inside the rating container
+                // For example: Create stars or any other rating system
+            } else {
+                ratingContainer.style.display = 'none';
+            }
+        });
     </script>
 </body>
 
