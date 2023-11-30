@@ -485,7 +485,7 @@ main {
 
 /* ============ Movie Details Section ================== */
 .background {
-    background-image: url("/assets/images/movies/background/jigarthanda-banner.jpg");
+    /* background-image: url("/assets/images/movies/background/jigarthanda-banner.jpg"); */
     background-size: cover;
     width: 100%;
     height: auto;
@@ -494,7 +494,6 @@ main {
 
 .movie-detail-container1 {
     background-color: rgba(168, 142, 142, 0.10);
-    /* Semi-transparent white background */
     backdrop-filter: blur(15px);
     width: 100%;
     height: 100%;

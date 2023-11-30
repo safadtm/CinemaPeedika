@@ -117,11 +117,10 @@
                 <!-- =========== Movie Poster and Trailer -->
                 <div class="flex jc-sp-b p-t-10">
                     <div class="movie-poster">
-                        <img class="movies-poster" src="assets/images/movies/posters/jigarthanda.jpg" alt="Poster">
+                        <img class="movies-poster" src="" alt="Poster">
                     </div>
                     <div class="movie-trailer">
-                        <video class="movies-trailer" src="assets/Trailers/Jigarthanda.mp4" autoplay muted
-                            controls></video>
+                        <video class="movies-trailer" src="" autoplay muted controls></video>
                     </div>
                 </div>
 
@@ -146,7 +145,7 @@
                                 <hr class="divider">
                                 <div class="flex">
                                     <h4>Writers</h4>
-                                    <span class="blue-color m-l-30 f-w-700 writer"></span>
+                                    <span class="blue-color m-l-30 f-w-700 writer" id="writersSection"></span>
                                 </div>
                                 <hr class="divider">
                                 <div class="flex">
@@ -238,6 +237,31 @@
 
         const movieId = parseInt(getUrlParameter('id'));
 
+        // JavaScript
+        async function fetchBackgroundImage() {
+            try {
+                const response = await fetch('assets/JSON/movies.json'); // Fetch your JSON file
+                const data = await response.json();
+                return data.banner; // Retrieve the background image URL from JSON
+            } catch (error) {
+                console.error('Error fetching JSON:', error);
+            }
+        }
+
+        async function setDynamicBackground() {
+            const imageUrl = await fetchBackgroundImage(); // Get the image URL from JSON
+            const backgroundElement = document.querySelector('.background');
+
+            if (imageUrl) {
+                backgroundElement.style.backgroundImage = `url(${imageUrl})`;
+            } else {
+                console.error('Image URL not found in JSON data');
+            }
+        }
+
+        // Call the function to set dynamic background
+        setDynamicBackground();
+
 
 
         function fetchAndPopulateMovieDetails() {
@@ -263,6 +287,25 @@
                         document.querySelectorAll('.movie-storyline')[2].textContent = selectedMovie.p3;
                         document.querySelectorAll('.movie-storyline')[3].textContent = selectedMovie.p4;
 
+                        const writersSection = document.getElementById('writersSection');
+                        selectedMovie.writers.forEach((writer, index) => {
+                            // Create a span element for each writer
+                            const writerSpan = document.createElement('span');
+                            writerSpan.textContent = writer;
+
+                            // Add a bullet point separator if it's not the last writer
+                            if (index !== selectedMovie.writers.length - 1) {
+                                const bulletSpan = document.createElement('span');
+                                bulletSpan.classList.add('bullet-point');
+                                bulletSpan.textContent = ' • ';
+
+                                writersSection.appendChild(writerSpan);
+                                writersSection.appendChild(bulletSpan);
+                            } else {
+                                writersSection.appendChild(writerSpan);
+                            }
+                        });
+
                         const starsSection = document.getElementById('starsSection');
                         selectedMovie.stars.forEach((star, index) => {
                             // Create a span element for each star
@@ -273,7 +316,7 @@
                             if (index !== selectedMovie.stars.length - 1) {
                                 const bulletSpan = document.createElement('span');
                                 bulletSpan.classList.add('bullet-point');
-                                bulletSpan.textContent = '•';
+                                bulletSpan.textContent = ' • ';
 
                                 starsSection.appendChild(starSpan);
                                 starsSection.appendChild(bulletSpan);
