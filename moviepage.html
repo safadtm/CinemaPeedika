@@ -57,7 +57,7 @@
                 <!-- ========== Movie Title and Rating   ========== -->
                 <div class="flex jc-sp-b">
                     <div>
-                        <h1>Jigarthanda Double X</h1>
+                        <h1 class="movie-name"></h1>
                         <h5 class="subtitle">2023 • 2h 52min</h5>
                     </div>
                     <div class="flex ratings ">
@@ -71,7 +71,7 @@
                                         width="35"></iconify-icon>
                                 </div>
                                 <div>
-                                    <p><b class="font22">8.5</b> /10</p>
+                                    <p><b class="font22 movie-rating">8.5</b> /10</p>
                                     <p class="subtitle font14">28k</p>
                                 </div>
 
@@ -100,14 +100,11 @@
                 <!-- =========== Movie Poster and Trailer -->
                 <div class="flex jc-sp-b p-t-10">
                     <div class="movie-poster">
-                        <img src="assets/images/movies/posters/jigarthanda.jpg" alt="Poster">
+                        <img class="movies-poster" src="assets/images/movies/posters/jigarthanda.jpg" alt="Poster">
                     </div>
                     <div class="movie-trailer">
-                        <!-- <iframe src="assets/Trailers/Jigarthanda.mp4" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe> -->
-                        <video src="assets/Trailers/Jigarthanda.mp4" autoplay muted controls ></video>
+                        <video class="movies-trailer" src="assets/Trailers/Jigarthanda.mp4" autoplay muted
+                            controls></video>
                     </div>
                 </div>
 
@@ -118,31 +115,26 @@
                     <div>
                         <section style=" width: 660.26px; height: auto;">
                             <div style="width: 300.46px; height: 37.14px;">
-                                <button class="transparent-button">Action</button>
-                                <button class="transparent-button">Comedy</button>
-                                <button class="transparent-button">Drama</button>
+                                <button class="transparent-button" id="genre1">Action</button>
+                                <button class="transparent-button" id="genre2">Comedy</button>
+                                <button class="transparent-button" id="genre3">Drama</button>
                             </div>
                             <div class="movie-description">
-                                <p>
-                                    In 1975, a filmmaker agrees to collaborate on a film with a gangster who wishes to
-                                    become a famous actor.
-                                </p>
+                                <p class="short-description"></p>
                                 <hr class="divider">
                                 <div class="flex">
                                     <h4>Director</h4>
-                                    <span class="blue-color m-l-30 f-w-700">Karthik Subbaraj</span>
+                                    <span class="blue-color m-l-30 f-w-700 director"></span>
                                 </div>
                                 <hr class="divider">
                                 <div class="flex">
                                     <h4>Writers</h4>
-                                    <span class="blue-color m-l-30 f-w-700">Karthik Subbaraj</span>
+                                    <span class="blue-color m-l-30 f-w-700 writer"></span>
                                 </div>
                                 <hr class="divider">
                                 <div class="flex">
                                     <h4>Stars</h4>
-                                    <span class="blue-color m-l-30 f-w-700">Raghava Lawrence <span
-                                            class="bullet-point">•</span>
-                                        S.J. Suryah <span class="bullet-point">•</span> Shine Tom Chacko</span>
+                                    <span class="blue-color m-l-30 f-w-700" id="starsSection"></span>
                                 </div>
                                 <hr class="divider">
                                 <div class="flex al-center">
@@ -169,57 +161,10 @@
 
             <div class="storyline-container">
                 <h2>Storyline</h2>
-                <p>
-                    1973 Kombai Village Forest: A despicable DSP Rathna Kumar is assigned to nab the notorious elephant
-                    poacher, Shettani. The police torture the local tribals about Shettani's whereabouts, even though
-                    they themselves are Shettani's victims. </p>
-                <p>
-                    1973 Madras: Kirubakaran is selected for the post of SI in the Tamil Nadu Police. He goes to his
-                    fiancé, Lourde's college, to convey the news and watch her performance at the college culturals.
-                    While he's talking with her, they observe a group of students fighting amongst themselves. Lourde
-                    challenges Kirubakaran to stop them fighting, to which he replies that he will do that only after he
-                    gets his police uniform. But, he goes ahead and tries to stop them anyway. Some time later, 4 of the
-                    students are shown to be murdered by Kirubakaran, who seemingly faints at the sight of blood, but
-                    has the weapon in his hand. He is then sentenced to prison.
-                </p>
-                <p>
-                    1975 Madurai: Rathna Kumar's elder brother, Jeyakodi, is a film star and rising politician of the
-                    ruling party, who is ambitious and desires to be the next Chief minister. However,he is distressed
-                    about his film screenings being halted in Coimbatore,Ramnad,Madurai and Tirunelveli by the
-                    supporters of his fellow party member and rival Karmegam. Alliyus Caesar, a notorious gangster and
-                    head of the Jigarthanda Sambhavam Fans Club is Karmegam's supporter at Madurai. Jeyakodi requests
-                    Rathna to kill Alliyus and the 3 other gangsters who are supporting Karmegam's political ambitions,
-                    so that he can make the latter less influential within the party. Rathna selects Kirubakaran, along
-                    with three other ex-cop prisoners, to send them as moles and assigns each of them a single target,
-                    with Kirubakaran's target being Alliyus. Rathna promises that all four of them will be acquitted and
-                    resumed to their duties if they succeed in their respective mission.
-                </p>
-                <p>
-
-                    Kirubakaran accepts the assignment as he wants to marry Lourde and get back his job. Espoused by
-                    another of Karmegam's supporters during a party, Alliyus advertises publicly in search for a film
-                    director who can make a pan-India film with him as the lead and introduce him as the first
-                    dark-complexioned actor in Tamil cinema. Kirubakaran assumes the alias of Ray Dasan, a student and
-                    assistant director of Satyajit Ray, and offers to make an Oscar-winning film based on Alliyus's
-                    life, as a gangster film, titled Pandyaa, after learning that he is an ardent fan of Clint Eastwood.
-                    Alliyus agrees to Ray's plan and their attempt to make a film. Kirubakaran wants to make a biopic of
-                    Alliyus and does live-shooting of his real life actions using a Super 8 film camera that Clint
-                    Eastwood apparently gifted to Caesar when he came for a shoot in their village. Kirubakaran learns
-                    that Alliyus belongs to the same tribe that is being haunted by Shettani. It is shown that Alliyus
-                    left the village as a young boy with his father due to a tragic incident and became a gangster as he
-                    lost faith in being good and empathetic.
-                </p>
-                <p>
-                    Alliyus invites the other 3 gangsters and Karmegam for his wife, Malaiyarasi's baby shower. One of
-                    the targets in the police' hitlist is successfully killed by one of the moles. This raises suspicion
-                    and Alliyus finds and kills all of the moles, except Kirubakaran, as the latter is unsuspected. He
-                    also learns that Alliyus ordered the hit on the 4 college students, for which he was made a
-                    scapegoat. This revelation hardens his determination to pursue vengeance against Alliyus. He wants
-                    Alliyus to be killed by Shettani, and hence asks him to visit his ancestral village and nab Shettani
-                    with the pretext that his adventure against Shettani will make a better biopic. Alliyus unwittingly
-                    agrees and visits the village and makes a deal with Rathna that he would nab Shettani in exchange of
-                    releasing the tribal members, to which the latter agrees.
-                </p>
+                <p class="movie-storyline"></p>
+                <p class="movie-storyline"></p>
+                <p class="movie-storyline"></p>
+                <p class="movie-storyline"></p>
             </div>
 
         </div>
@@ -248,6 +193,68 @@
 
     <!-- Javascript script tag -->
     <script src="assets/js/script.js"></script>
+    <script>
+        function getUrlParameter(name) {
+            name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        const movieId = parseInt(getUrlParameter('id'));
+
+
+
+        function fetchAndPopulateMovieDetails() {
+            fetch('assets/JSON/movies.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok')
+                    }
+                    return response.json();
+                })
+                .then(moviesData => {
+                    console.log(movieId);
+                    const selectedMovie = moviesData.find(movies => movies.id === movieId);
+
+                    if (selectedMovie) {
+                        document.querySelector('.movie-name').textContent = selectedMovie.movieName;
+                        document.querySelector('.movies-trailer').src = selectedMovie.trailer;
+                        document.querySelector('.movies-poster').src = selectedMovie.poster;
+                        document.querySelector('.short-description').textContent = selectedMovie.shortDescription;
+                        document.querySelector('.director').textContent = selectedMovie.director;
+                        document.querySelectorAll('.movie-storyline')[0].textContent = selectedMovie.p1;
+                        document.querySelectorAll('.movie-storyline')[1].textContent = selectedMovie.p2;
+                        document.querySelectorAll('.movie-storyline')[2].textContent = selectedMovie.p3;
+                        document.querySelectorAll('.movie-storyline')[3].textContent = selectedMovie.p4;
+
+                        const starsSection = document.getElementById('starsSection');
+                        selectedMovie.stars.forEach((star, index) => {
+                            // Create a span element for each star
+                            const starSpan = document.createElement('span');
+                            starSpan.textContent = star;
+
+                            // Add a bullet point separator if it's not the last star
+                            if (index !== selectedMovie.stars.length - 1) {
+                                const bulletSpan = document.createElement('span');
+                                bulletSpan.classList.add('bullet-point');
+                                bulletSpan.textContent = '•';
+
+                                starsSection.appendChild(starSpan);
+                                starsSection.appendChild(bulletSpan);
+                            } else {
+                                starsSection.appendChild(starSpan);
+                            }
+                        });
+                    } else {
+                        console.error('Movies ID not found or invalid');
+                    }
+
+                })
+        }
+        fetchAndPopulateMovieDetails();
+
+    </script>
 </body>
 
 </html>

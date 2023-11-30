@@ -1,15 +1,14 @@
 id
-movie name
-year
-duration
-rating
-trailer
-poster
+movie name  - movie-name
+year & duration  - subtitle 2023 • 2h 25min
+rating - movie-rating
+trailer - movies-trailer video src
+poster  - movies-poster
 banner
-genres
-short description
-director
-writers
+genres - genres.foreach
+short description - short-description
+director  - director
+writers - writer
 stars
 p1 - paragraph 1
 p2 - paragraph 2

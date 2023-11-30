@@ -57,19 +57,19 @@
         <div class="main-container">
 
             <div class="movie-details-container">
-                <a href="moviepage.html">
-                    <h1>Jigarthanda Double X</h1>
+                <a href="moviepage.html?id=1">
+                    <h1></h1>
                 </a><br>
                 <p>லி,हि, +2 more ∙ Action ∙ U/A 16+</p>
-                <a href="moviepage.html"><button class="watch-trailer-button" type="submit"
+                <a href="moviepage.html?id=1"><button class="watch-trailer-button" type="submit"
                         id="watch-trailer-button"><iconify-icon icon="ic:baseline-play-arrow" width="25"></iconify-icon>
                         Trailer</button>
                 </a>
             </div>
             <div class="movie-banner-container">
                 <div class="movie-banner-img">
-                    <a href="moviepage.html">
-                        <img src="assets/images/movies/background/jigarthanda-banner.jpg" alt="Leo">
+                    <a href="moviepage.html?id=1">
+                        <img src="">
                     </a>
                 </div>
             </div>
@@ -158,9 +158,11 @@
                 const createPosterCard = (container, movie) => {
                     const posterCard = document.createElement('div');
                     posterCard.classList.add('poster-card');
-
+                   
+                   
                     const link = document.createElement('a');
-                    link.href = 'moviepage.html?id=${movie.id}';
+                    link.href = `moviepage.html?id=${movie.id}`;
+
 
                     const image = document.createElement('img');
                     image.src = movie.banner;
