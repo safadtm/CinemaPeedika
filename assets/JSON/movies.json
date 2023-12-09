@@ -35,7 +35,7 @@
     "year": 2023,
     "duration": "2h 52min",
     "rating": 8.6,
-    "trailer": "assets/Trailers/trailer.mp4",
+    "trailer": "assets/Trailers/markantonytrailer.mp4",
     "poster": "assets/images/movies/posters/markantonyposter.jpg",
     "banner": "assets/images/movies/banners/markantony.jpg",
     "genres": [
@@ -129,7 +129,7 @@
     "duration": "2h 52min",
     "rating": 8.6,
     "trailer": "assets/Trailers/kantaratrailer.mp4",
-    "poster": "assets/images/movies/posters/kanataraposter.jpg",
+    "poster": "assets/images/movies/posters/kantaraposter.jpg",
     "banner": "assets/images/movies/banners/kanatara.jpg",
     "genres": [
       "Action",
@@ -161,7 +161,7 @@
     "duration": "2h 52min",
     "rating": 8.6,
     "trailer": "assets/Trailers/familymantrailer.mp4",
-    "poster": "assets/images/movies/posters/familyposter.jpg",
+    "poster": "assets/images/movies/posters/familymanposter.jpg",
     "banner": "assets/images/movies/banners/familyman.jpg",
     "genres": [
       "Action",

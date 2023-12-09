@@ -279,8 +279,8 @@ body {
     text-decoration: underline;
 }
 
-/* ============ HOMEPAGE ============ */
 
+/* =================== NAVBAR ==================== */
 /* Nav Bar */
 
 .navbar {
@@ -339,6 +339,51 @@ body {
     caret-color: red;
 
 }
+
+
+/* Media query for responsiveness */
+/* @media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; 
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        display: block; 
+        cursor: pointer;
+    }
+
+    .nav-active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .nav-active li {
+        margin: 10px 0;
+    }
+
+    @media screen and (min-width: 769px) {
+        .hamburger-menu {
+            display: none;
+        }
+
+        .nav-links {
+            display: flex; 
+        }
+    }
+} */
+
+
+
+/* ============ HOMEPAGE ============ */
+
 
 .homepage-signin-btn {
     border-radius: 30px;
@@ -446,11 +491,19 @@ main {
     padding-left: 10px;
 }
 
-.movies-grid-poster,
+/* .movies-grid-poster,
 .tv-shows-poster {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+} */
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min(11.25rem,100%),1fr));
+    grid-gap: 4rem;
+    justify-content: space-between;
+
 }
 
 .poster-card {

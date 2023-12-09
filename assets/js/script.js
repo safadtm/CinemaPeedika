@@ -219,6 +219,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // User Fetching
 
+// JavaScript for toggling navigation on smaller screens
+// const hamburgerMenu = document.querySelector('.hamburger-menu');
+// const navLinks = document.querySelector('.nav-links');
+
+// hamburgerMenu.addEventListener('click', () => {
+//     navLinks.classList.toggle('nav-active');
+//     console.log('click');
+// });
 
 //  BACK TO TOP ACTION //
 window.addEventListener('scroll', function () {

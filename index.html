@@ -43,6 +43,10 @@
                     </li>
                 </ul>
             </div>
+            <!-- Hamburger menu icon -->
+            <!-- <div class="hamburger-menu">
+                <img src="assets/images/icons/hamburger.png" alt="" srcset="">
+            </div> -->
         </div>
 
     </header>
@@ -80,7 +84,7 @@
         <!--  Movies Section -->
         <div class="movies-grid-container">
             <h3>Movies</h3>
-            <div class="movies-grid-poster">
+            <div class="movies-grid-poster wrapper">
             </div>
 
         </div>
@@ -88,7 +92,7 @@
         <!-- TV Shows  Section -->
         <div class="tv-shows-container">
             <h3>TV Shows</h3>
-            <div class="tv-shows-poster">
+            <div class="tv-shows-poster wrapper">
             </div>
         </div>
 
@@ -158,8 +162,8 @@
                 const createPosterCard = (container, movie) => {
                     const posterCard = document.createElement('div');
                     posterCard.classList.add('poster-card');
-                   
-                   
+
+
                     const link = document.createElement('a');
                     link.href = `moviepage.html?id=${movie.id}`;
 
