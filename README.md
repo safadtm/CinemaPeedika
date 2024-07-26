@@ -27,6 +27,7 @@ The core technology stack used in this project includes:
 - HTML
 - CSS
 - JavaScript
+- PHP 
 
 ---
 
